@@ -1,0 +1,83 @@
+\ProvidesPackage{LocalF}
+
+\makeatletter
+\newcommand\RedeclareMathOperator{%
+  \@ifstar{\def\rmo@s{m}\rmo@redeclare}{\def\rmo@s{o}\rmo@redeclare}%
+}
+% this is taken from \renew@command
+\newcommand\rmo@redeclare[2]{%
+  \begingroup \escapechar\m@ne\xdef\@gtempa{{\string#1}}\endgroup
+  \expandafter\@ifundefined\@gtempa
+     {\@latex@error{\noexpand#1undefined}\@ehc}%
+     \relax
+  \expandafter\rmo@declmathop\rmo@s{#1}{#2}}
+% This is just \@declmathop without \@ifdefinable
+\newcommand\rmo@declmathop[3]{%
+  \DeclareRobustCommand{#2}{\qopname\newmcodes@#1{#3}}%
+}
+\@onlypreamble\RedeclareMathOperator
+\makeatother
+
+\tikzset{
+    level/.style = {
+      thick,
+        blue},
+state/.style={fill=black,circle},
+hole/.style={shape=circle,draw=black,thick},
+particle/.style={thick,draw=#1, postaction={decorate},
+    decoration={markings,mark=at position .5 with {\arrow[#1]{stealth}}}},particle/.default=black,
+resonance/.style={ultra thick,draw=blue, postaction={decorate},
+    decoration={markings,mark=at position .5 with {\arrow[blue]{stealth}}}},
+gluon/.style={decorate, draw=black,
+    decoration={coil,aspect=0}},
+PIC/.style n args ={3}{align=center,label={center:
+\includepdf[scale=#1,angle=#2]{#3}
+}}
+}
+
+
+
+\newenvironment{definition}[1]{\textbf{Def.: }\textbf{#1.}\index{#1 (def.)}}{$\mathfrak{Use\ it.}$}
+\newenvironment{usefull}[1]{\textbf{N.B.:}\textbf{#1.}\index{#1 (Usefull)}}{$\mathfrak{Great!}$}
+\newenvironment{generalization}[1]{\textbf{More generally: }\textbf{#1.}\index{#1 (gen.)}}{$\mathfrak{Stay\ hungry!}$}
+
+
+\newcommand{\diagentry}[1]{\mathmakebox[1.8em]{#1}}%% diagonal matrix tools
+\newcommand{\xddots}{%
+  \raise 4pt \hbox {.}
+  \mkern 6mu
+  \raise 1pt \hbox {.}
+  \mkern 6mu
+  \raise -2pt \hbox {.}
+}
+
+\newcommand{\permC}[4]{\begin{pmatrix}#1&\ldots&#2\\#3&\ldots&#4\\\end{pmatrix}}%permutazione notazione di cauchy
+\newcommand{\const}{\text{const}}
+\newcommand{\diagg}[2]{\begin{pmatrix}
+#1&\ldots&0\\
+\vdots&\ddots&\vdots\\
+0&\ldots&#2\\
+\end{pmatrix}}
+\newcommand{\adjoint}[1]{{{#1}^{\dag}}}
+\newcommand{\Idws}[1]{Id_{#1}}
+\newcommand{\invers}[1]{{{#1}^{-1}}}
+\newcommand{\IR}{irreducible representation}
+\newcommand{\RI}{rapresentazione irriducibile}
+\newcommand{\IRs}{irreducible representations}
+\newcommand{\RIs}{rapresentazioni irriducibili}
+\newcommand{\LA}[1]{\mathfrak{#1}}
+\newcommand{\missing}[1]{\overset{#1}{\scriptscriptstyle\curlyvee}}
+\newcommand{\mpern}[2]{$#1\times #2$}
+\newcommand{\mq}[1]{#1\overline{#1}}
+\newcommand{\nhd}{neighborhood}
+\newcommand{\rep}{representation}
+\newcommand{\rapreg}[2]{T\indices{_{#1}^{(#2)}}}
+\newcommand{\rapregb}[2]{\bar{T}\indices{_{#1}^{(#2)}}}
+\newcommand{\sfu}{Special function}
+\newcommand{\reals}[1]{R^{#1}}
+\newcommand{\complexes}[1]{C^{#1}}
+\newcommand{\spheres}[1]{S^{#1}}
+\newcommand{\action}{\mathrel{\raisebox{-.3ex}{$*$}}}
+\newcommand{\T}[1]{T_{#1}}
+\newcommand{\insieme}[1]{\{#1\}}
+\newcommand{\sti}{Stieltjes}

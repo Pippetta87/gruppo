@@ -1,0 +1,17 @@
+\documentclass[../main.tex]{subfiles}
+
+\pgfplotsset{ every non boxed x axis/.append style={x axis line style=-},
+     every non boxed y axis/.append style={y axis line style=-}}
+
+
+\begin{document}
+
+\begin{equation*}
+    \begin{pmatrix}
+\tikz\draw[pattern=north west lines, pattern color=black] (-1/3,-1/3) rectangle (1/3,+1/3);&\tikz\node[above] (0,0) {$0$};\\
+0&\tikz\draw[pattern=north west lines, pattern color=black] (-1/3,-1/3) rectangle (1/3,1/3);
+
+\end{pmatrix}
+\end{equation*}
+
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{scope}
+\draw (0,0) node {$\bullet$} ;
+\draw (0,0) node[below] {$A$} ;
+\draw (1,0) node {$\bullet$} ;
+\draw (1,0) node[below] {$B$} ;
+\draw (0.5,0.87) node {$\bullet$} ;
+\draw (0.5,0.87) node[above] {$C$} ;
+\end{scope}
+
+\begin{scope}[shift={(1.5,0.5)}]
+\node{$\xrightarrow{r_3}$};
+\end{scope}
+
+\begin{scope}[shift={(2,0)}]
+\draw (0,0) node {$\bullet$} ;
+\draw (0,0) node[below] {$B$} ;
+
+\draw (1,0) node {$\bullet$} ;
+\draw (1,0) node[below] {$A$} ;
+
+\draw (0.5,0.87) node {$\bullet$} ;
+\draw (0.5,0.87) node[above] {$C$} ;
+\end{scope}
+
+\begin{scope}[shift={(4,0)}]
+\draw (0,0) node {$\bullet$} ;
+\draw (0,0) node[below] {$C$} ;
+\draw (1,0) node {$\bullet$} ;
+\draw (1,0) node[below] {$B$} ;
+\draw (0.5,0.87) node {$\bullet$} ;
+\draw (0.5,0.87) node[above] {$A$} ;
+\end{scope}
+
+\begin{scope}[shift={(3.5,0.5)}]
+\node{$\xrightarrow{R}$};
+\end{scope}
+
+\begin{scope}[shift={(6,0)}]
+\draw (0,0) node {$\bullet$} ;
+\draw (0,0) node[below] {$B$} ;
+\draw (1,0) node {$\bullet$} ;
+\draw (1,0) node[below] {$C$} ;
+\draw (0.5,0.87) node {$\bullet$} ;
+\draw (0.5,0.87) node[above] {$A$} ;
+\draw (1.5,0.35) node[] {$=$} ;
+\end{scope}
+
+\begin{scope}[shift={(5.5,0.5)}]
+\node{$\xrightarrow{r_3}$};
+\end{scope}
+
+
+\begin{scope}[shift={(3.5,-2.5)}]
+\draw (0,0) node {$\bullet$} ;
+\draw (0,0) node[below] {$A$} ;
+\draw (1,0) node {$\bullet$} ;
+\draw (1,0) node[below] {$B$} ;
+\draw (0.5,0.87) node {$\bullet$} ;
+\draw (0.5,0.87) node[above] {$C$} ;
+\draw (-0.5,0.35) node[] {$R^2$} ;
+
+\end{scope}
+
+\end{tikzpicture}
+
+
+
+\end{document}

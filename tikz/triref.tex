@@ -1,0 +1,37 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{scope}
+\draw (0,0) node {$\bullet$} ;
+\draw (0,0) node[below] {$A$} ;
+\draw (1,0) node {$\bullet$} ;
+\draw (1,0) node[below] {$B$} ;
+\draw (0.5,0.87) node {$\bullet$} ;
+\draw (0.5,0.87) node[above] {$C$} ;
+\end{scope}
+
+\begin{scope}[shift={(2,0.5)}]
+\node{$\rightarrow$};
+\end{scope}
+
+\begin{scope}[shift={(3,0)}]
+\draw (0,0) node {$\bullet$} ;
+\draw (0,0) node[below] {$B$} ;
+
+\draw (1,0) node {$\bullet$} ;
+\draw (1,0) node[below] {$A$} ;
+
+\draw (0.5,0.87) node {$\bullet$} ;
+\draw (0.5,0.87) node[above] {$C$} ;
+\end{scope}
+
+\begin{scope}[shift={(7,0.5)}]
+
+%\node[text width=6cm,text centered]{La trasformazione a sinistra \'e rappresentata dalla permutazione:
+%\pmtid \pmtdo{(kl)} \pmtdo{A{B} B{A} C{C}} \pmtvprint[A B C].};
+\end{scope}
+\end{tikzpicture}
+
+\end{document}

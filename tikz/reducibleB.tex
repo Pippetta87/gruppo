@@ -1,0 +1,32 @@
+\documentclass[../main.tex]{subfiles}
+
+
+\begin{document}
+
+
+\begin{equation*}
+\begin{pmatrix}
+\begin{tikzpicture}[every node/.style={minimum width=1.5em}]
+\matrix (m1) [matrix of math nodes]
+{ 
+X\\
+};
+\matrix (m2) at (m1-1-1.east) [anchor=m2-1-1.west,
+matrix of math nodes]
+{
+Y\\
+};
+\matrix (m3) at (m1-1-1.south east) [anchor=m3-1-1.north west,
+matrix of math nodes]
+{
+Z\\
+};
+\node[scale=1] at (m1.south |- m3-1-1) {$0$};
+
+\draw (m1-1-1.north east) -- (m1-1-1.north east |- m3-1-1.south west);
+\draw (m1-1-1.south west) -- (m2-1-1.south east);
+\end{tikzpicture}
+\end{pmatrix}
+\end{equation*}
+
+\end{document}

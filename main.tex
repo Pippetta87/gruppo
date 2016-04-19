@@ -1,0 +1,2466 @@
+\documentclass[oneside,12pt]{memoir}
+
+\usepackage{makeidx}
+%\usepackage[utf8]{inputenc}
+\pagestyle{plain}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% importa pacchetti
+\usepackage{usepkg}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%% titletoc, titlesec setting
+\usepackage{titleT}
+%%%%%%%%%%%%%%%%%% setlength
+\usepackage{mylength}
+\linespread{0.5}
+
+%%%%%%%%%%%% Hyperref package
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%Geometry package
+
+\usepackage{mygeometry}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni generali
+\usepackage{functions}
+
+%http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
+\usepackage{sources}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Funzioni per questo file main
+\usepackage{MathOp} %%
+\usepackage{LocalF}
+
+
+\makeindex
+\raggedbottom %http://tex.stackexchange.com/questions/102084/annoying-paragraph-spacing-issue-with-memoir
+
+
+
+
+
+
+\author{Pippetta}
+\title{Cose da sapere di teoria dei gruppi bracci 3}
+\date{\today}
+%\date{\currenttime}
+
+\makeindex
+\raggedbottom %http://tex.stackexchange.com/questions/102084/annoying-paragraph-spacing-issue-with-memoir
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\tableofcontents*
+\listoffigures
+
+\mainmatter
+
+\part{Come organizzare}
+
+\chapter{Registro Bracci}
+\PartialToc
+
+Gruppo Esempi di gruppi. Sottogruppi. Esempi
+
+Grippo di simmetria di una molecola. Teorema di Cayley. Classi loaterali. teorema di Lagrange. Gruppi ciclici. Sottogruppi invarianti. Gruppo quaziente.
+ 
+ Esempi di sottogruppi invarianti. Gruppi sempli e semisemplici. Classi di coniugazione. Esempi. Se un gruppo ha $p^2$ elementi, p primo, \'e abeliano. 
+ 
+Applicazione alla crittografia a chiave pubblica. Rappresentazioni fedeli e no. Una rappresentazione \'e una rappresentazione fedele del quoziente con il nucleo. 
+
+Rappresentazioni equivalenti. Rappresentazioni irriducibili, riducibile, completamente risucibili. Per un gruppo finito o compatto tutte le rappresentazioni sono completamente riducibili.
+
+I lemmi di Schur. Unicit\'a, a meno di un fattore, dell'operatore che interlaccia 2 R.I. Non unicit\'a degli spazi che riducono una rappresentazione, se una RI compare piu' volte. Ogni sottospazio invariante e' una somma diretta di sottospazi irriducibili.
+
+La rappresentazione regolare. Teoremi di completezza e prtpogonalita'. Teorema di Burnside. Caratteri.
+
+I caratetri sono una base ortonormale per le funzioni di classe. Il numero delle RI \'e uguale al numero delle classi. Molteplicit\`a di una RI ricavata coi caratteri. RI di gruppi abeliani.
+
+Secondo teorema di ortogonalit\'a dei caratteri. Analisi della rappresentazione regolare. Proiettori sui sottospazi corrispondenti alle RI.
+
+Propriet\'a dei proiettori e delle isometrie parziali. Riduzione della rappresentazione regolare per il gruppo del triangolo tramite il loro uso.
+
+Se F \'e una famiglia di operatori chiusa sotto aggiunzione e sotto cui V \'e irriducibile, allora se A commuta con gli operatori di F \'e un multiplo dell'identit\'a. Se $F_1$ e $F_2$ sono due famiglie sotto cui $V_1$ e $V_2$ sono irriducibili, $AT_1=T_2A$ implica o $A=0$ o A \'e invertibile. Rappresentazioni cicliche.
+
+Prodotto diretto di due gruppi. Ricerca delle rappresentazioni irriducibili n termini delle RI dei fattori.
+
+Prodotto semidiretto. Esempi (gruppo euclideo, gruppo del triangolo). Costruzione di un gruppo prodotto semidiretto di due gruppi dati.
+
+  Il caso in cui nel prodotto semidiretto un fattore \'e abeliano. Propriet\'a delle RI di $NxH$. Orbite. Piccolo gruppo. Costruzione delle RI di G a partire dalle RI del piccolo gruppo. L'esempio del gruppo del triangolo.
+
+Gruppi topologici. Gruppi di Lie. Esempi. Vettri tangenti. Lo spazio tangente. Esempi.
+
+Dato $I(e)$, ogni g connesso con \'e il prodotto di $g_k$ in $I(e)$. Sottogruppi a un parametro. Ogni vettore tangente \'e il vettore tangente di un sottogruppo a un parametro $IOn$ un $I(e)$ apposito. ogni g si trova su un gruppo a un parametro. Corrispondenza biunivoca gra un intorno di e e un intorno del vettore tangente nullo.
+
+$\sigma(X)$ \'e lineare. $[X,Y]$ \'e un vettore tangente e sigma \'e un omomorfismo fra algebre di Lie.
+
+Formula BCH. $T(g)$ \'e indipendente dalla divisione di $\gamma(e,g)$. Se G \'e semplicemente connesso, \'e indipendente dalla curva dq e a g. $T(g)$ cos\'i costruito \'e una rappresentazione. Ricoprimento universale. Il caso $SU(2)/SO(3)$.
+
+%http://www.math.uconn.edu/~kconrad/math5210f13/
+%http://users.dimi.uniud.it/~mario.mainardis/LIBRO02.pdf
+%http://personalpages.to.infn.it/~billo/didatt/gruppi/gruppi_2003_pf.html
+
+\chapter{per punti}
+\PartialToc
+
+\begin{itemize*}
+\item Gruppi di Lie e algebre di Lie
+\end{itemize*}
+
+\chapter{Main topic  bracci's handwrited noted}
+\PartialToc
+
+\section{Gruppi ''classici''}
+
+\begin{itemize*}
+\item gruppo pg1
+g. ciclico 2
+\item automorfismo pg 4
+\item gruppo euclideo pg 4
+g.  di simmetria (rotazioni) pg. 5
+g. di Poincare pg 5
+g. di Lorentz pg. 5
+\item classe laterale pg.6
+sottogruppo invariante pg.6
+\item Ker di omomorfismo pg. 6bis
+\item classe di coniugazione pg. 8
+\item n-esimo gruppo pg. 2
+\item rotazioni spazio n-dim $SO(n)$ pg. 3
+\item g. $U(n)$ pg.3
+\item g. $O(p,q)$ pg.3
+\item g. di matrici pg 3-4
+\item omomorfismo (es rappresentazione) pg 4
+\item Traslazioni di $R^n$, cambiamenti di scala + traslazioni pg. 4
+g. di simmetria di una figura (g. di permutazione di n elementi $S_n$) pg.5-6
+\item sottogruppo pg. 6
+Dato un gruppo finito di n elementi esso e' isomorfo ad un sottogruppo di $S_n$ (1 T di isomorfismo?) pg.6
+
+\end{itemize*}
+
+\section{Classi laterali. Ordine di un gruppo. Gruppo quoziente}
+
+\begin{itemize*}
+\item Ordine di g., classi di equivalenza pg 6-7
+Classe laterale pg.7
+g invariante (ie gruppo invariata triangolo: permutazioni, traslazioni: gruppo euclideo, poincare) pg.7
+\item Dato omomorfismo $p:G\to G'$ il nucleo di p e' un sottogruppo \item invariate (2o T di omo?) e viceversa (3o T di omo?)pg.8
+Ordine di G e gruppi ciclici pg 9
+\item Gruppo quoziente (g. euclideo) pg 9
+\item Classe di coniugazione (ie rotazioni permutazioni) pg. 10-11
+\item Permutazione:struttura a cicli pg.11
+\item Centro Ca di un elemento a pg. 12
+\end{itemize*}
+
+\section{Rappresentazione di un gruppo.}
+
+\begin{itemize*}
+\item Rappresentazione di un gruppo (omomorf da G a un gruppo di matrici)pg 12,15
+\item Gruppo  interi modulo n e crittografia pg 13-14
+\item gruppo semplice pg 15
+Rappresentazione di gruppi non semplici pg. 15
+\item Rappresentazioni equivalenti pg. 15-16
+R riducibile pg. 16
+Per un gruppo finito ogni rappresentazione e' completamente riducibile pg.16
+\item Lemma Schur pg 18,20
+\item Funzioni nel gruppo (associa ad un elemento del gruppo un numero) pg. 19
+\item Rappresentazioni unitarie lemma di schur (r unitaria) pg. 21
+Il teorema spettrale comporta che se \'e data una rapres. unitaria irriducibile di un gruppo e A  \'e un operatore che commuta con tutti gli $U(g)$ allora A \'e multiplo dell'unit\'a: pag. 25; viceversa pag 26
+U unitaria \'e irriducibile iff ogni $v\neq0$ \'e ciclico pg 26
+\item Se una rappresentazione \'e unitaria: o \'e ciclica o \'o somma diretta di rappresentazioni cicliche pg 26
+Date $U_1$, $U_2$ rapr irr in $H_1$ e $H_2$, sono unitariamente equivalenti iff esiste $v_1$ in $H_1$ e $v_2$ in $H_2 \neq0$ tali che per ogni g $(U1(g)v1,v1)_1=(U2(g)v2,v2)_2$ pag 27
+\item Insieme delle funzioni su un gruppo pag 29
+\item Rappresentazione regolare pg 29
+Decomposizione della rappresentazione regolare in somma diretta di rappresentazioni irriducibili pg 29
+\item T. di Burnside pg 30
+\item Relazioni di ortogonalit\'a pg 30
+\item Base ortogonale per $F(G)$ pg 31-32
+\item carattere pg 33
+\item propriet\'a di ortogonalit\'a e completezza delle rappresentazioni irriducibili pg 33
+\item funzioni di classe pg 33-34
+un gruppo ha tante rappr irr quante sono le classi di coniugazione pg 34
+\item seconda relazione di ortogonalit\'a dei caratteri pg 35
+\item rappresentazioni irriducibili del gruppo di simmetria del triangolo pg 35
+\item numero classi coniugazione gruppi  $S_n$ pg 36
+\item utilit\'a dei caratteri e relazioni ortogonalit\'a per ricavarli pg 36
+\item Equazione delle classi pg 36,40
+\item Rappresentazioni regolari del gruppo del triangolo pg 37-39
+matrici di classe pg 40
+\item rappresentazione dell'algebra pg 40
+esempio gruppo simmetria triangolo pg 42
+\item Sottogruppo H generato dai commutatori; H \'e invariante; il gruppo quoziente $G/H$ \'e abeliano pg 44
+\item Teorema della dimension pg 46
+\item Intero algebrico pg 46
+\item RAPPRESENTAZIONE IRRIDUCIBILE per $o(G)=pq$  primi; gruppo invariata del pentagono pg 49
+\end{itemize*}
+
+\section{Trasformata di Fourier}
+
+\begin{itemize*}
+\item Interpretazione gruppale della trasformata di Fourier pg 50
+\end{itemize*}
+
+\section{Prodotto diretto, semidiretto. Piccolo gruppo.}
+
+\begin{itemize*}
+\item Prodotto cartesiano $G\times H$: prodotto diretto; prodotto semidiretto pg 53
+prodotto diretto pg 53
+prodotto semidiretto pg 55
+\item prodotto semidiretto: simmetrie del triangolo,gruppo euclideo, gruppo di Poincare pg 56
+\item $N\times H$ con prodotto definito tramite omomorfismo beto pg 58
+\item RAPPRESENTAZIONE IRRIDUCIBILE di G,=semidiretto di N e H con N abeliamo: piccolo gruppo pg 59
+\item Movimento(orbita) sullo spazio degli o(N) punti costituito dai caratteri pg 59-60
+Relazione di equivalenza: appartenenza di due punti alla stessa orbita pg 60
+\item Gruppo di isotropia di un punto o piccolo gruppo pg 60
+\item Orbite del gruppo di simmetria del triangolo pg 60-61
+\item RAPPRESENTAZIONE IRRIDUCIBILE, decomposizione in somma diretta e rappresentazione del piccolo gruppo pg 61
+\item Data RAPPRESENTAZIONE IRRIDUCIBILE di G in V sono presenti in V le RAPPRESENTAZIONE IRRIDUCIBILE di N aventi caratteri appartenenti a una data orbita e che esauriscono l'orbita: scelto caratteri chi1 in V1 corrisp., il piccolo gruppo  H1 dell'orbita $chi_1$ \'e rappresentato in maniera irriducibile pg 62
+1. scelgo orbita nello spazio dei caratteri $\chi_1$, \ldots, 2. Trovo piccolo gruppo  $H_1$ di $\xi_1$ 3. costruisco rappresentazione irriducibile di $H_1$ in $V_1$ di base $e_1$, ..., $e_n$ 4. introduco per ogni classe laterale $H_i=h_iH_1$  Vi ortogonale a $v_1$ e ai $V_j$ di base $eri=T(hi)er$. Si ottiene rappresentazione irriducibile di G. piccolo gruppo 62
+Tutte e sole le rappresentazioni irriducibili di $G=N(\rtimes)H$
+\item piccolo gruppo 61-65
+Piccolo gruppo e rappresentazione elementi su orbita: g di simmetria triangolo piccolo gruppo 66
+\end{itemize*}
+
+\section{Gruppi di Lie: spazio tangente nell'origine}
+
+
+\begin{itemize*}
+\item intorno in gruppo topologico 
+\item piccolo gruppo 67
+\item gruppo di Lie piccolo gruppo 67
+\item curva in gruppo di Lie 
+\item piccolo gruppo 68
+\item spazio tangente nell'origine pg 68
+\item spazio tangente nell'origine: SO(3)
+\item piccolo gruppo 69-69
+\item Ogni elemento della parte connessa con l'identit\'a di un gruppo di Lie \'e uguale al prodotto di elementi appartenenti a un intorno qualsiasi dell'identit\'a
+\item Gruppo compatto pg 70
+\item Vettore tangente al gruppo nell'identit\'a e sottogruppo ad 1 parametro 
+\item piccolo gruppo 71
+\item condizione che una curva rappresenti un gruppo ad un parametro pg. 72
+\item Sottogruppo a un parametro per gruppi di matrici pg.  75
+\item Formula di Lie pg. 76
+\item Presi due vettori tangenti anche il commutatore \'e un vettore tangente di un gruppo a 1 parametro pag. 77
+\end{itemize*}
+
+
+\section{Gruppi di Lie. Algebre di Lie e rappresentazioni.}
+
+\begin{itemize*}
+\item Algebra di Lie pag. 77
+\item Generatori di un gruppo sono gli elementi dell'algebra di Lie 
+\item piccolo gruppo 77
+\item Una rappresentazione del gruppo induce una rappresentazione degli elementi vicini all'origine (dell'algebra di Lie): Il viceversa \'e vero se il gruppo \'e semplicemente connesso. pg  78
+\item Rappresentazione come omomorfismo dell'algebra di Lie del gruppo in un algebra di matrice pg 78
+\item Gruppi diversi con stessa algebra di Lie pg 79
+\item Formula BCH pg 80
+\item Rappresentazione algebra di Lie rappresentazione del gruppo in intorno di Identit\'a pg 80
+\item Ricoprimento universale: dato G connesso, esiste H semplicemente connesso omomorfo a G, con la stessa algebra di Lie pg 83
+\end{itemize*}
+
+
+
+\part{Cose da sapere di ''Metodi 3''.}
+
+\chapter{Teoria dei gruppi}
+\PartialToc
+
+\section{Gruppi e sottogruppi.}
+
+\subsection{Un gruppo}
+
+\begin{definition}{Gruppo 1.}
+
+$(G,\cdot)$ \'e un gruppo se
+\begin{enumerate}
+\item Chiusura.
+
+$\forall (a,b)\in G, ab=c\in G$.
+
+\item Associativit\'a.
+
+$\forall a,b,c\in G, (ab)c=a(bc)$.
+
+\item Esistenza elemento neutro. (Ridondante)\label{itm:neutro}
+
+$\exists 1\in G: 1a=a1=a$.
+
+\item[label=\ref{itm:neutro}.] Neutro sinistro.
+
+$\exists 1_s: 1_sa=a, \forall a\in G$.
+
+\item Esistenza dell'inverso. (Ridondante)\label{itm:inverso}
+
+$\forall a\in G, \exists \invers{a}\in G: a\invers{a}=\invers{a}a=1$.
+
+\item[label=\ref{itm:inverso}.] Inverso sinistro.
+
+$\forall a\in G, \exists x\in G: xa=1$.
+
+\end{enumerate}
+
+\end{definition}
+
+\begin{definition}{Gruppo 2.}
+Un gruppo \'e un insieme di elementi tali che
+\begin{enumerate}
+\item $\forall (a,b)\in G$ \'e definita un'operazione binaria $\cdot$ tale che $a\cdot b=c\in G$.
+\item $\forall a\in G$ \'e definita un'operazione inversa $x\to\invers{x}$ tale che $\invers{a}\in G$ \'e unico.
+\item Associativit\'a: $(ab)c=a(bc)$
+\item Legge dell'inversa: $\invers{a}(ab)=b=(ba)\invers{a}$
+\end{enumerate}
+\end{definition}
+
+\begin{definition}{Gruppo 3.}
+Un gruppo \'e un insieme G di elementi e un'operazione binaria $/$ tale che
+\begin{enumerate}
+\item $\forall (a,b)\in G$, esiste $a/b\in G$ ed \'e unico.
+\item $a/(b/b)=a$.
+\item $(a/a)/(b/c)=c/b$.
+\item $(a/c)/(b/c(=a/b$.
+\end{enumerate}
+L'operazione unaria inversa \'e definita tramite $\invers{b}=(b/b)/b$, l'operazione binaria prodotto tramite $ab=a/\invers{b}$.
+\end{definition}
+
+\begin{definition}{Gruppo Abeliano o commutativo}
+Preso un gruppo G esso si dice abeliano se  $\forall x,y \in G \Rightarrow xy=yx$.
+\end{definition}
+
+\begin{definition}{Gruppo ciclico}
+Un gruppo G \'e ciclico se ogni elemento di G pu\'o essere espresso mediante potenze di un elemento fisso b:
+\begin{enumerate}
+\item Gruppo ciclico di ordine infinito: $\forall i\neq j \Rightarrow b^i\neq b^j $; il gruppo \'e isomorfo a $(\mathbb{N},+)$.
+\item Gruppo ciclico di ordine n: $ \exists n  \lvert b^{n}=1 , \{1,\ldots ,b^n\}$ sono distinti.
+Esiste un solo gruppo ciclico di ordine n (modulo isomorfismo): di questa classe di equivalenza fa parte $(\mathbb{N}  \textrm{ mod}\  n ,+)$
+Si dice ordine di un elemento $g\in G$ \index{Ordine di un elemento} l'ordine del gruppo ciclico che esso genera.
+\end{enumerate}
+\end{definition}
+
+\subsection{Classe di equivalenza}
+
+
+When a set has an equivalence relation defined on its elements, there is a natural grouping of elements that are related to one another, forming what are called equivalence classes. Given a set X and an equivalence relation $\sim$ on X, the equivalence class of an element a in X is the subset of all elements in X which are equivalent to a. It follows from the definition of the equivalence relations that the equivalence classes form a partition of X. The set of equivalence classes is sometimes called the quotient set or the quotient space of X by $\sim$ and is denoted by $X / \sim$.
+
+\begin{definition}{Classe di equibvalenza}
+An equivalence relation is a binary relation $\sim$ satisfying three properties:
+\begin{enumerate}
+\item Reflexivity.
+For every $a\in X$, $a\sim a$.
+\item Symmetry.
+For every $a,b\in X$: $a\sim b\ \Rightarrow\ b\sim a$.
+\item Transitivity.
+For every $a,b,c\in X$: $a\sim b$ and $b\sim c$ then $a\sim c$.
+\end{enumerate}
+The equivalence class of an element a is denoted $[a]$ and is defined as the set $[a]=\{x\in X: x\sim a\}$.
+\end{definition}
+
+\subsection{Gruppi di matrici.}
+
+\begin{definition}{Gruppo lineare $GL(V)$.}
+Sia V uno spazio vettoriale di dimensione finita, indichiamo con $GL(V)$ l'insieme degli automorfismi di V, cio\'e delle applicazioni lineari bigettive di V in se stesso. Vedi gruppi di Lie\index{Work out correct ref GL}.
+\end{definition}
+
+\begin{itemize}
+\item Numeri reali (anche $Q,C$) senza sono gruppo commutativo con $*$.
+\item  I $R, Q, C$ sono un gruppo abeliano con $\cdot=+$
+\end{itemize}
+
+\subsubsection{matrici \texorpdfstring{$n\times n$}{nXn}.}
+
+Matrici $n\times n$ con $\det{}\neq0$ sono un gruppo con l'operazione prodotto riga per colonna. Per $n\neq1$ non \'e abeliano.
+
+\subsubsection{Prodotto scalare, Rotazioni e altri invarianti.}
+
+\begin{itemize}
+\item Le rotazioni del piano xy formano un gruppo commutativo.
+\item Le rotazioni di $R^3$ formano un gruppo Non-commutativo.
+
+Le rotazioni sono le trasformazioni tali che
+\begin{align*}
+&(R\vec{x},R\vec{y})=(\vec{x},\vec{y})&\intertext{quindi:}\\
+&(\vec{x},R^TR\vec{y})=(\vec{x},\vec{y})&\intertext{quindi:}\\
+&RR^T=1\ \Rightarrow\ (\det{R})^2=1
+\end{align*}
+
+Le riflessioni hanno determinante -1 le rotazioni +1.
+
+\end{itemize}
+
+\begin{definition}{Gruppo ortogonale speciale: $SO(n)$.}
+Il gruppo delle rotazioni dello spazio reale n-dimensionale \'e $SO(n)$.
+\end{definition}
+
+\begin{definition}{Gruppo ortogonale: $O(n)$.}
+Il gruppo delle trasformazioni dello spazio reale n-dimensionale con $AA^T=1$ \'e $O(n)$.
+\end{definition}
+
+\begin{definition}{Gruppo unitario: $U(n)$, $SU(n)$.}
+
+Il gruppo che conserva il prodotto scalare su $C^n$:
+\begin{align*}
+&(Ux,Uy)=(x,y)=(x,U^{\dag}Uy)\ \Rightarrow U^{\dag}U=\Idws{C^n}\\
+&|\det{U}|^2=1
+\end{align*}
+
+Se mi restringo alle matrici con $\det{U}=1$ ho $SU(n)$.
+\end{definition}
+
+\begin{definition}{Gruppi $O(p,q)$, $SO(p,q)$, $U(p,q)$, $SU(p,q)$.}
+Il gruppo delle trasformazioni su $R^{p+q}$ che conserva $x_1^+\ldots+x_p^2-x_{p+1}^2-\ldots-x_{p+q}^2$ cio\'e se $A=\Idws{(p,-q)}$:
+\begin{align*}
+&(Rx,ARx)=(x,Ax)&\intertext{cio\'e:}\\
+&(x,(R^TAR-A)x)=0&\intu{deve essere antisimmetrico ma \'e simmetrico quindi:}\\
+&R^TAR-A=0
+\end{align*}
+\end{definition}
+
+Il gruppo di trasformazioni cos\'i definito \'e $O(p,q)$, se si richiede $\det{R}=1$ si ha $SO(p,q)$, analogamente si hanno su $C^n$ i gruppi $U(p,q)$ e $SU(p,q)$
+
+\subsection{Gruppi di numeri interi e crittografia}
+
+\subsubsection{Interi modulo n.}
+
+La relazione $a\sim b$ se $a-b=kn$ \'e una relazione di equivalenza: gli interi sono divisi in $n$ classi di equivalenza per le quali si definisce l'operazione di somma $[a]+[b]=[a+b]$
+
+\subsubsection{Interi coprimi con n.}
+
+Considero i numeri interi coprimi con n: se li divido in classi di equivalenza modulo n e definisco il prodotto $[a]\cdot [b]=[ab]$ si ha un gruppo rispetto alla moltiplicazione.
+
+Casi particolari:
+
+\begin{itemize}
+\item $n=p$ primo.
+
+Il gruppo ha $p-1$ elementi, come per tutti i gruppi $a\expy{o(G)}=e$.
+
+\item $n=pq$ primi diversi tra loro.
+
+Il gruppo \'e fatto dalle classi di equivalenza dei numeri $1\leq r<n$ primi rispetto a n:
+\begin{align*}
+&n-1-[\text{-$q-1$ multipli di p}]\\
+&-[\text{$p-1$ multipli di q}]\\
+&=pq-1-(q-1)-(p-1)=(p-1)(q-1)\\
+&kq\neq hp
+\end{align*}
+
+Posto $\phi(n)=(p-1)(q-1)=o(G)$ per ogni elemento del gruppo $r\expy{\phi(n)+1}=r \mod{n}$ (\'e valida per tutti i numeri).
+
+\end{itemize}
+
+\subsubsection{Crittografia}
+
+Nella crittografia a chiave pubblica si sfrutta il fatto che \'e sempre pi\'u difficile dato, $n=pq$, trovare i fattori primi pi\'u sono grandi. Chi ha costruito n conosce p e q e quindi $\phi(n)$: pu\'o trovare $l$ e $d$ tali che
+
+\begin{align*}
+&ld=k\phi(n)+1&\intertext{$l$ e $d$ sono uno l'inverso dell'altro modulo $\phi(n)$}
+\end{align*}
+
+L'autore comunica $l$ e $n$ (ma non $p$ e $q$), il mittente cifra il numero r che vuole spedire calcolando $r^l\mod{n}$; l'autore ricava $r$ nel modo sequente
+\begin{align*}
+&(r^l)^d=r\expy{k\phi(n)+1}\mod{n}\\
+&=r\expy{\phi(n)+1}=r\mod{n}
+\end{align*}
+
+
+Per fare la stessa cosa un estraneo che conosce n dovrebbe ricavare $\phi(n)$, cio\'e $p$ e $q$.
+
+\subsection{Sottogruppo}
+
+\begin{definition}{Sottogruppo proprio}
+Dato un gruppo G e $H\subset G$, H \'e un sottogruppo proprio di G se \'e un gruppo rispetto a * di G .
+\end{definition}
+
+\begin{definition}{Product of group subset}
+If K and H are subset of a group G their product is a subset of G such that:
+$HK=\{ hk | h\in H, k \in K \}$.
+\end{definition}
+
+\subsubsection{Caratterizzazione unit\'a}
+
+\begin{align*}
+&1^2=1\\
+&x^2=x\ \Rightarrow\ x=\invers{x}x^2=\invers{x}x=1
+\end{align*}
+
+L'unit\'a di H \'e la stessa di G: verifica $x^2=x$.
+
+\subsubsection{Caratterizzazione di un sottogruppo.}
+
+Un sottoinsieme $H\subset G$ \'e un sottogruppo proprio di G se e solo se
+\begin{enumerate}
+\item $h_1, h_2\in H$ allora $h_1h_2\in H$
+\item $h_1\in H$ allora $\invers{h_1}\in H$
+\end{enumerate}
+
+\subsection{Gruppo simmetrico}
+
+\begin{definition}{Gruppo simmetrico: permutazioni.}
+
+A permutation group is a group $G$ whose elements are permutations of a given set $M$ and whose group operation is the composition of permutations in $G$ (which are thought of as bijective functions from the set M to itself). 
+
+The group of all permutations of a set $M$ is the symmetric group of $M$, often written as $\Sym{M}$. The term permutation group thus means a subgroup of the symmetric group. If $M = \{1,2,...,n\}$ then, $\Sym{M}$, the symmetric group on n letters is usually denoted by $S_n$.
+
+Una permutazione \'e indicata nella notazione di Cauchy scrivendo nella prima riga gli elementi dell'insieme e nella seconda la loro immagine sotto la permutazione
+
+\begin{align*}
+\sigma=
+\begin{pmatrix}
+x_1&\ldots&x_n\\
+\sigma(x_1)&\ldots&\sigma(x_n)\\
+\end{pmatrix}
+\end{align*}
+
+Il gruppo simmetrico relativo a un insieme finito X \'e il gruppo delle funzioni bigettive da X in X e il cui * \'e la composizione di funzioni.
+
+Si trova indicato come $Sym(X)$,$\Sigma_X$,$S_X$,$\mathfrak{S}_X$ e se X=\{ 1,2,\ldots ,n\} si usa $Sym(n)$,$\Sigma_n$,$S_n$,$\mathfrak{S}_n$.
+
+Per insiemi finiti, permutazioni e "funzioni bigettive" si riferiscono alla stessa operazione: riordinamento.
+\end{definition}
+
+Fatti:
+\begin{itemize}
+\item Il gruppo $S_n$ ha $n!$ elementi.
+\item Cycle notation.
+
+This alternative notation describes the effect of repeatedly applying the permutation, thought of as a function from a set onto itself. It expresses the permutation as a product of cycles corresponding to the orbits of the permutation; since distinct orbits are disjoint, this is referred to as ''decomposition into disjoint cycle''.
+
+Starting from some element x of S, one writes the sequence $(x \sigma(x) \sigma(\sigma(x)) \ldots)$ of successive images under $\sigma$, until the image returns to x, at which point one closes the parenthesis rather than repeat x. The set of values written down forms the orbit (under $\sigma$) of x, and the parenthesized expression gives the corresponding cycle of $\sigma$. One then continues by choosing a new element y of S outside the previous orbit and writing down the cycle starting at y; and so on until all elements of S are written in cycles. Since for every new cycle the starting point can be chosen in different ways, there are in general many different cycle notations for the same permutation; for the example above one has:
+
+\begin{align*}
+&{\begin{pmatrix}1&2&3&4&5\\2&5&4&3&1\end{pmatrix}}={\begin{pmatrix}1&2&5\end{pmatrix}}{\begin{pmatrix}3&4\end{pmatrix}}=\\
+&{\begin{pmatrix}3&4\end{pmatrix}}{\begin{pmatrix}1&2&5\end{pmatrix}}={\begin{pmatrix}3&4\end{pmatrix}}{\begin{pmatrix}5&1&2\end{pmatrix}}.
+\end{align*}
+
+A cycle $(x)$ of length 1 occurs when $\sigma(x) = x$, and is commonly omitted from the cycle notation, provided the set S is clear: for any element $x \in S$ not appearing in a cycle, one implicitly assumes $\sigma(x) = x$. The identity permutation, which consists only of 1-cycles, can be denoted by a single 1-cycle $(x)$, by the number 1, or by id.
+
+A cycle $(x_1 x_2 \ldots x_k)$ of length k is called a k-cycle. Written by itself, it denotes a permutation in its own right, which maps $x_i$ to $x_{i+1}$ for $i < k$, and $x_k$ to $x_1$, while implicitly mapping all other elements of S to themselves (omitted 1-cycles). Therefore the individual cycles in the cycle notation can be interpreted as factors in a composition product. Since the orbits are disjoint, the corresponding cycles commute under composition, and so can be written in any order. The cycle decomposition is essentially unique: apart from the reordering the cycles in the product, there are no other ways to write $\sigma$ as a product of cycles. Each individual cycle can be written in different ways, as in the example above where $(5 1 2)$ and $(1 2 5)$ and $(2 5 1)$ all denote the same cycle, though note that $(5 2 1)$ denotes a different cycle.
+
+An element in a 1-cycle $(x)$, corresponding to $\sigma(x) = x$, is called a fixed point of the permutation $\sigma$. A permutation with no fixed points is called a derangement. Cycles of length two are called transpositions; such permutations merely exchange the place of two elements, implicitly leaving the others fixed. Since the orbits of a permutation partition the set S, for a finite set of size n, the lengths of the cycles of a permutation $\sigma$ form a partition of n called the cycle type of $\sigma$.
+
+\item Dato un gruppo finito di n elementi esso \'e isomorfo a un sottogruppo di $S_n$.
+
+Siano $g_1,\ldots,g_n$ gli elementi del gruppo possiamo far corrispondere a $g_p$ quella permutazione che manda $k\to k'$ se $g_pg_k=g_{k'}$: se indichiamo con $a_p$ quella permutazione tale che $g_pg_k=g_{a_p(k)}$ a $g_p$ si associa la permutazione $a_p$ rappresentabile con $\begin{pmatrix}1&2&\ldots&n\\a_p(1)&a_p(2)&\ldots&a_p(n)\\\end{pmatrix}$, il prodotto $g_qg_p$ che manda $g_1\to g_q(g_pg_1)= (g_qg_p)g_1$ \'e associato alla permutazione $\begin{pmatrix}1&2&\ldots&n\\a_{pq}(1)&a_{pq}(2)&\ldots&a_{pq}(n)\\\end{pmatrix}$.
+
+Resta definito l'omomorfismo: $g_qg_{a_p(1)}=g_{a_q(a_p(1))}$ ossia l'indice 1 va in $a_q(a_p(1))$ cio\'e $\phi(g_qg_p)=a_q\circ a_p$.
+
+\end{itemize}
+
+
+\subsubsection{Groups vs. permutations vs. group actions}
+
+Permutation groups have more structure than abstract groups, and different realizations of a group as a permutation group need not be equivalent as permutations. For instance $S_3$ is naturally a permutation group, in which any transposition has cycle type $(2,1)$; but the proof of Cayley's theorem realizes $S_3$ as a subgroup of $S_6$ (namely the permutations of the 6 elements of $S_3$ itself), in which permutation group transpositions have cycle type $(2,2,2)$. Finding the minimal-order symmetric group containing a subgroup isomorphic to a given group (sometimes called minimal faithful degree representation) is a rather difficult problem. So in spite of Cayley's theorem, the study of permutation groups differs from the study of abstract groups, being a branch of representation theory.
+
+Much of the power of permutations can be regained in an abstract setting by considering group actions instead. A group action actually permutes the elements of a set according to the recipe provided by the abstract group. For example, $S_3$ acts faithfully and transitively (by permuting) a set with exactly three elements.
+
+\subsubsection{Gruppo di simmetrie di una figura}
+
+\begin{definition}{Gruppo diedro $\mathbb{D}_n$}
+%http://www.northeastern.edu/suciu/MATH3175/DihedralGroups.pdf
+
+Il gruppo diedro $\mathbb{D}(n)$ \'e il gruppo delle simmetrie di un poligono regolare di n vertici.
+Ci sono 2 tipi di simmetrie del	 n-agono regolare e ognuna di esse da luogo a n elementi di $\mathbb{D}_n$:
+%http://ima.umn.edu/~miller/2Dspacegroups.pdf
+\begin{enumerate}
+\item Rotazioni $R_0,R_1,\ldots ,R_{n-1}$ dove $R_k$ \'e la rotazione di angolo $\frac{2\pi k}{n}$.
+\item Riflessioni $S_0,S_1, \ldots ,S_{n-1}$ dove $S_k$ \'e una riflessione rispetto alla retta pasante per l'origine che forma un angolo di $\frac{\pi k}{n}$ con l'asse orizzontale.
+\end{enumerate}
+che posso rappresentare tramite le matrici $2\times2$:
+
+\[
+R_k=\left(
+\begin{array}{cc}
+cos(\frac{2\pi k}{n}) & -sin(\frac{2\pi k}{n}) \\
+sin(\frac{2\pi k}{n}) & cos(\frac{2\pi k}{n})
+\end{array}
+\right); 
+\]
+\[
+S_k=\left(
+\begin{array}{cc}
+cos(\frac{2\pi k}{n}) & sin(\frac{2\pi k}{n}) \\
+sin(\frac{2\pi k}{n}) & -cos(\frac{2\pi k}{n})
+\end{array}
+\right)
+\]
+\[
+\text{e valgono le relazioni}
+\left\{
+\begin{array}{c}
+R_i*R_j=R_{i+j} \\
+R_i*S_j=S_{i+j} \\
+S_i*R_j=S_{i-j} \\
+S_i*S_j=R_{i-j} 
+\end{array}
+\right.
+\]
+\end{definition}
+
+
+\begin{definition}{Gruppo diedro generalizzato}
+Per ogni gruppo abeliano H si definisce gruppo diedro generalizzato di H, scritto $Dih(H)$, il prodotto semi-diretto \index{Prodotto semidiretto (di 2 gruppi)} di $H$ e $\mathbb{Z}_2$, cio\'e $Dih(H)=H\rtimes_\phi \mathbb{Z}_2$ con $\phi(0)$ l'identit\'a e $\phi(1)$ l'inversione, cos\'i abbiamo $\forall h_1,h_2 \in H, t_2 \in \mathbb{Z}_2$:
+\[ (h_1,0)*(h_2,t_2)=(h_1+h_2,t_2)\]
+\[ (h_1,1)*(h_2,t_2)=(h_1-h_2,1+t_2)\]
+Il sottogruppo di $Dih(H)$ di elementi $(h,0)$ \'e un sottogruppo normale di indice 2, isomorfo a H, mentre gli elementi $(h,1)$ sono i propri inversi.
+
+%http://en.wikipedia.org/wiki/Generalized_dihedral_group
+The conjugacy classes are:
+%the sets {(h,0 ), (−h,0 )}
+%the sets {(h + k + k, 1) | k in H }
+Thus for every subgroup M of H, the corresponding set of elements (m,0) is also a normal subgroup. We have:
+Dih(H) / M = Dih ( H / M )
+Cos\'i $\forall M\subset H$, il corrispondente insieme di elementi $(m,0)$ \'e un sottogruppo normale.
+
+\end{definition}
+
+
+\subsubsection{Gruppo di simmetria del triangolo \texorpdfstring{$\mathbb{D}_3$}{D3}}
+
+Considero le simmetrie del triangolo equilatero, cio\'e le trasformazioni del piano che preservano distanze e angoli e mandano il triangolo in s\'e. Per esempio la trasformazione:
+
+\subfile{tikz/triangle}
+
+
+Le simmetrie di un poligono di 3 vertici iscritto in una circonferenza sono
+$S=\{R_0,R_{\frac{2 \pi}{3}},R_{\frac{4 \pi}{3}},S_A,S_B,S_C \}$ dove $R_{angolo}$ sono rotazioni e $S_{punto}$ sono riflessioni che tengono fisso il $punto$; facendo la tavola di Cayley (o di moltiplicazione) dell'insieme S\index{Tavola di Cayley (Triangolo)} si vede che S \'e un gruppo se prendo come $*$ la composizione di funzioni.
+Per essere didascalici precisiamo che la trasformazione $R_{\frac{2\pi}{3}}$, per esempio \'e la antioraria rotazione di $120^\circ$ attorno al centro: 
+
+\subfile{tikz/rotcv}
+ 
+mentre la riflessione $S_C$
+
+\subfile{tikz/triref}
+
+Per completezza scrivo la tabella di Cayley (Verticale composto Orizzontale):
+
+
+
+\begin{tabular}{|c||c|c|c|c|c|c|}\hline
+$\circ$ & $R_0$ & $R_{\frac{2 \pi}{3}}$ & $R_{\frac{4 \pi}{3}}$ & $S_A$ & $S_B$ & $S_C$ \\ \hline
+$R_0$ & $R_0$ & $R_{\frac{2 \pi}{3}}$ & $R_{\frac{4 \pi}{3}}$ & $S_A$ & $S_B$ & $S_C$ \\
+$R_{\frac{2 \pi}{3}}$ & $R_{\frac{2\pi}{3}}$ & $R_{\frac{4\pi}{3}}$ & $R_0$ & $S_C$ & $S_A$ & $S_B$ \\
+$R_{\frac{4 \pi}{3}}$ & $R_{\frac{4\pi}{3}}$ & $R_0$ & $R_{\frac{2\pi}{3}}$ & $S_B$ & $S_C$ & $S_A$ \\
+$S_A$ & $S_A$ & $S_B$ & $S_C$ & $R_0$ & $R_{\frac{2\pi}{3}}$ & $R_{\frac{2\pi}{3}}$ \\
+$S_B$ & $S_B$ & $S_C$ & $S_A$ & $R_{\frac{4\pi}{3}}$ & $R_0$ & $R_{\frac{2\pi}{3}}$ \\
+$S_C$ & $S_C$ & $S_A$ & $S_B$ & $R_{\frac{2\pi}{3}}$ & $R_{\frac{4\pi}{3}}$ & $R_0$ \\ \hline
+\end{tabular}
+
+I sei elementi del gruppo corrispondono alle possibili permutazioni di $\{1,2,3\}$.
+
+\subsubsection{Gruppo delle permutazioni}
+Gruppo i cui elementi sono permutazioni di un insieme di elementi X, l'insieme di tutte le permutazioni di X \'e il gruppo simmetrico:di solito si indica gruppo delle permutazioni un sottoinsieme del gruppo simmetrico.
+$S_n$ \'e non Abeliano per $n >2$.
+%http://en.wikipedia.org/wiki/Symmetric_group
+Possiamo dare una rappresentazione esplicita di una permutazione $P\in S_n$ tramite una matrice $n\times n$ definita cos\'i: $(P)_{ij}={\delta}_{i,P(j)}$
+
+
+\begin{definition}{Gruppo Alternante}
+Il gruppo alterno o alternante \'e il sottogruppo delle permutazioni pari di un insieme finito, si indica con $A_n$ o $Alt(n)$ se l'insieme \'e $\{1,\ldots ,n\}$
+\end{definition}
+
+\begin{definition}{Omomorfismo tra gruppi.}
+Una mappa $\phi:G\to H$ \'e un'omomorfismo tra gruppi se $\phi(g_1g_2)=\phi(g_1)\phi(g_2)$.
+
+\end{definition}
+
+Esempio: Omomorfismo tra $(R,+)$ e $(R,*)$.
+
+Associando a $x$ la matrice $\exp{x}$ all'elemento $x+y$ \'e associato il prodotto $\exp{x}*\exp{y}$.
+
+\subsection{Teorema di Cayley}
+
+Ogni gruppo G \'e isomorfo al gruppo delle permutazioni dei propri elementi.
+
+\begin{proof}
+$\forall g \in G$ definiamo la mappa $R(g):x\mapsto xg, \forall x \in G$ per $g\in G$ fissato.
+R(g) \'e surgetiva poich\'e dato $y\in G$ si ha $R(g)(yg^{-1})=y$ e iniettiva poich\'e se $x_1g=x_2g \Rightarrow x_1=x_2$.
+$R(g):x\mapsto xg$ \'e una permutazione per ogni g (praticamente quella sopra \'e la definizione di una permutazione); inoltre $R:G\to Sym(G), | R:g\mapsto R(g)$ \'e isomorfismo tra gruppi: 
+\begin{equation*}
+R_{g_1}R_{g_2}(x)=(xg_2)g_1=x(g_2g_1)=R_{g_1g_2}(x), g_1\neq g_2 \Rightarrow R(g_1)\neq R(g_2).
+\end{equation*}
+Poi si vede che $\left\{
+\begin{array}{l}
+R(1)=1 \\
+R(g^{-1})R(g)=1
+\end{array}
+\right. \Rightarrow R(g^{-1})=[R(g)]^{-1}.$
+\end{proof}
+Le permutazioni $R(g):x \mapsto xg$ sono chiamate rappresentazioni destre di G \index{Rappresentazioni destre}; analogamente si ha che $L(g):x\mapsto gx$ \'e un anti-isomorfismo \index{anti-isomorfismo} per G (L(g) inverte la moltiplicazione: $L(g_1g_2)=L(g_2)L(g_1)$).
+
+\subsection{Gruppi delle traslazioni e cambiamenti di scala.}
+
+Le traslazioni  di $R^n$ sono un gruppo che pu\'o essere rappresentato come un gruppo di matrici
+\begin{align*}
+&\T{\vec{a}}\vec{x}=\vec{x}+\vec{a}\\
+&\vec{a}\to\diagg{a_1}{a_n}
+\end{align*}
+
+Il gruppo dei cambiamenti di scala e traslazioni $T(a,\vec{b})\vec{x}=a\vec{x}+\vec{b}$ ha come legge di composizione e inverso:
+\begin{align*}
+&T(a',\vec{b'})T(a,\vec{b})=(aa',a'\vec{b}+\vec{b'}\\
+&\invers{T(a,\vec{b})}T(a,\vec{b})=I=T(1,0)&\intertext{quindi:}\\
+&\invers{T(a,\vec{b})}=(\frac{1}{a},-\frac{1}{a}\vec{b})
+\end{align*}
+
+La matrice associata ad un'elemento del gruppo $T(a,b)$:
+
+\begin{align*}
+&T(a,b)\to\begin{pmatrix} a&b\\0&1\\\end{pmatrix}\\
+&x\to\begin{pmatrix}x\\1\\\end{pmatrix}\\
+&\begin{pmatrix} a'&b'\\0&1\\\end{pmatrix}\begin{pmatrix} a&b\\0&1\\\end{pmatrix}=\begin{pmatrix} aa'&a'b+b'\\0&1\\\end{pmatrix}
+\end{align*}
+
+Questo gruppo non \'e abeliano.
+
+\subsection{Gruppo euclideo}
+
+\'E il gruppo delle trasformazioni $T(R,\vec{a})\vec{x}=R\vec{x}+\vec{a}$ con $R\in O(3)$, la legge di composizione e l'inversa sono:
+\begin{align*}
+&T(R'\vec{a'})T(R,\vec{a})=T(R'R,R'\vec{a}+\vec{a'})\\
+&\invers{T(R,\vec{a})}=T(\invers{R},-\invers{R}\vec{a})
+\end{align*}
+
+Il gruppo non \'e abeliano.
+
+Pu\'o essere rappresentato sotto forma di matrici
+
+\begin{align*}
+&T(R,\vec{a})\to
+\left(
+\begin{array}{ccc}
+\multicolumn{2}{c}{R(2\times 2)} & a_1 \\
+\multicolumn{2}{c}{} & a_2 \\
+0&0&1\\
+\end{array}
+\right) \\
+&M(R,\vec{a})\evecthree{x_1}{x_2}{1}=(R\vec{x}+\vec{a},1)
+\end{align*}
+
+\subsection{Gruppo di Lorentz.}
+Conserva $x_1^2+x^2_2+x_3^3-x_4^2$: \'e $SO(3,1)$.
+
+\subsection{Gruppo di Poincar\'e.}
+
+Dati $L\in SO(3,1)$ e $a\in R^4$ si ha una rappresentazione matriciale:
+\begin{align*}
+&(L,a)\to
+\left(
+\begin{array}{cccc}
+\multicolumn{3}{c}{R(2\times 2)} & a_1 \\
+\multicolumn{3}{c}{} & \vdots \\
+\multicolumn{3}{c}{} & a_4 \\
+0&\ldots&0&1\\
+\end{array}
+\right) \\
+&x\to\evecfour{x_1}{x_2}{x_3}{x_4}
+\end{align*}
+
+\section{Ordine, classi laterali e insieme quoziente}
+
+\subsection{Ordine di un gruppo.}
+
+\subsubsection{Comportamento operazioni insiemistiche}
+
+$\{ H_j \}$ insieme di sottogruppi di G $\Rightarrow$ $H=\bigcap_{j}H_j$ \'e un sottogruppo.
+
+In generale dati due sottogruppi H,K di G non \'e vero che l'unione insiemistica di H con K sia un gruppo: $H\cup K$ \'e un sottogruppo di G $\iff$ $K\subset H$ o $K\supset H $.
+
+\begin{definition}{Reticolo insieme sottogruppi di G.}
+Nell'insieme $\mathcal{L}(G)$ di tutti i sottogruppi di G definiamo le operazioni di $\bigvee$ e $\bigwedge$ nel modo seguente:
+Dati $H,K\subset \mathcal{L}(G)$ , $H\bigvee K=<H\cup K>$ e $H\bigwedge K=H\cup K$.
+Con tali operazioni $\mathcal{L}(g)$ \'e un reticolo.
+\end{definition}
+
+\subsubsection{Sottogruppo generato da un sottoinsieme di G}
+Dato un sottoinsieme S di G definisco $\{ S\}$ come il pi\'u piccolo sottogruppo di G che contiene S: $\{ S \}$ \'e costituito da elementi del tipo $x_1*\ldots *x_s , \forall s \in  \mathbb{N}$ con $x_i$ oppure $x_i^{-1}$ appartenenti a S.
+
+
+
+
+\subsubsection{Insieme generatore}
+Un sottoinsieme $X\subset G$ si dice insieme generatore per G se $\forall g \in G$ posso scrivere $g=x_1^{a_1}\ldots x_r^{a_r}$, dove $x_i \in X$ e $a_i \in \mathbb{Z}$ e cio\'e $G=<X>$; se l'insieme X \'e finito dico che G \'e finitamente generato.
+
+
+\begin{definition}{Ordine di un gruppo (o dimensione).}
+La cardinalit\'a dell'insieme G si indica con $|G|$ e si dice ordine di G: il "numero" di elementi di un gruppo G pu\'o essere finito, infinito numerabile oppure infinito con cardinalit\'a del continuo, nei primi due casi si parla di ordine di G nell'ultimo di dimensione.
+\end{definition}
+
+\begin{definition}{Gruppo finito}
+ Un gruppo si dice finito se la sua cardinalit\'a \'e un numero naturale.
+%socle
+%frattini subgroup
+%http://en.wikipedia.org/wiki/Characteristic_subgroup
+
+Un gruppo G si dice di ordine finito se esiste  k intero finito $\forall g\in G$ tale che $g^k=1$. 
+\end{definition}
+
+\begin{definition}{Periodo o ordine di un elemento.}
+Il minimo intero k per cui $g^k=1$ si dice periodo o ordine dell'elemento, un elemento di ordine 2 si dice involuzione \index{Involuzione (gruppi)}, un gruppo in cui ogni elemento ha ordine finito si dice di torsione \index{Gruppo di torsione}.
+\end{definition}
+
+\begin{definition}{Esponente di un gruppo}
+The exponent of a group is defined as the least common multiple of the orders of all elements of the group. If there is no least common multiple, the exponent is taken to be infinity (or sometimes zero, depending on the convention). 
+\end{definition}
+
+
+\subsection{Gruppi ciclici.}
+
+\begin{definition}{Gruppo ciclico. Ordine di un elemento.}
+Un gruppo \'e ciclico se ogni elemento pu\'o essere espresso tramite potenza di un elemento fisso b. Se 
+\begin{itemize}
+\item $b^i\neq b^j,\ \forall i\neq j$ il gruppo \'e di ordine infinito  ed \'e isomorfo con $(N,+)$.
+\item esiste n (minimo): $b^n=1$ allora $1,b,\ldots,b^{n-1}$ sono distinti.
+\end{itemize}
+
+Definiamo ordine di un elemento b l'ordine del gruppo ciclico $\{b\}$ che esso genera.
+\end{definition}
+
+Per ogni n esiste un solo gruppo ciclico di ordine n (modulo isomorfismo), di questa classe di equivalenza fa parte anche $(N\ \mod{n},+)$.
+
+
+Fatti:
+\begin{itemize}
+\item G non contiene sottogruppi propri se e solo se G \'e gruppo ciclico finitodi ordine p dove p \'e primo.
+\end{itemize}
+
+
+\subsection{Classi laterali.}
+
+\begin{definition}{Classi laterali (Destra/Sinistra).}
+Dato un gruppo G e un suo sottogruppo H, l'insieme degli elementi $xh,\ \forall h \in H$, fissato $x \in G$ \'e chiamato classe laterale sinistra di H in G di rappresentante x e si indica con $xH$, similmente Hx designa la classe laterale destra.
+
+L'elemento x \'e detto rappresentante della classe: ogni $u\in Hx$ pu\'o essere preso come rappresentante. Scrivo :
+\begin{align*}
+&G=H(1)+Hx_2+\ldots+Hx_r
+\end{align*}
+per indicare che le classi latelari sono disgiunte e ''ricoprono'' G. r \'e chiamato l'indice di H in G: $r=[G:H]$.
+\end{definition}
+
+Fatti:
+\begin{itemize}
+\item Due classi laterali di H in G dello stesso tipo sono o identiche o disgiunte; una classe laterale di H ha la stessa cardinalit\'a di H.
+\begin{proof}
+Supponiamo $\exists z \in Hx$ e $Hy$ $\Rightarrow$ $z=h_1x=h_2y$, allora si ha $x=h_1^{-1}h_2y$ e $hx=hh_1^{-1}h_2y=h'y$ quindi $Hx \subseteq Hy$; similmente si vede che $Hy\subseteq Hx$.
+\end{proof}
+
+\item $\invers{(Hx)}=\invers{x}H$:
+\begin{align*}
+&G=H(1)+Hx_2+\ldots+hx_r\\
+&G=H+\invers{x_2}H+\ldots+\invers{x_r}H
+\end{align*}
+
+\end{itemize}
+
+\subsubsection{Teorema di Lagrange.}
+La cardinalit\'a di $G/H$ \'e l'ordine di H in G e si indica con $|G:H|$.
+L'ordine di un gruppo G \'e il prodotto dell'ordine di un suo sottogruppo H per l'indice di H in G: $|G|=|G/H|*|H|$
+\begin{proof}
+Tutte le $r=|G:H|$ classi laterali contengono lo stesso numero di elementi di H(=o(H)). Siano $H\subset G,K\subset H$, supponiamo $G=H + \ldots + Hx_r$ e $H=K+ \ldots + Ky_s$ allora posso scrivere $g\in G$ in modo unico come $g=hx_j$ con $h\in H$ e in particolare $h=ky_i$ con $k\in K$: le classi laterali di K in G sono date da $Ky_ix_j$, con $i=1,\ldots ,s$ e $j=1,\ldots ,r$. Due classi siffatte sono uguali se appartengono alla stessa classe di H, cio\'e per $x_j$ comune, e di K, cio\'e per $y_i$ comune $\Rightarrow$ le classi laterali scritte sopra son disgiunte.
+Inoltre ho provato che se $G\subseteq H\subseteq K\Rightarrow [G:K]=[G:H][H:K]$. 
+
+\end{proof}
+
+Fatti:
+\begin{itemize}
+\item Disuguaglianze degli indici.
+
+Dati A,B sottogruppi di G si ha\\
+$[A\cup B:B]\geq[A:A\cap B]$
+\begin{proof}
+Sia $D=A\cap B$ con $A=D1+Dx_2+\ldots+DX_r$, $r=[A:A\cap B]$; vogliamo dimostrare che $B,\ldots,Bx_r$ sono tutti distinti in $A\cup B$;supponiamo per assurdo che $Bx_i=Bx_j$, con $i\neq j \Rightarrow \exists b\in B | x_j=bx_i$, d'altra parte $x_i$ e $x_j$ $\in A$ $\Rightarrow$ $b\in A$ $\Rightarrow$ $b\in A\cap B$. Da ci\'o ne risulterebbe che le classi $Dx_j$ e $Dx_i$ hanno in comune l'elemento $x_j=bx_i$ il che \'e  ASSURDO. Allora concludiamo che esistono almeno tante classi laterali distinte di B in $A\cup B$ quante ne esistono di $A\cap B$ in A.
+
+\end{proof}
+
+\item Uguaglianza degli indici.
+
+
+Siano $[A\cup B:B]$ e $[A\cup B:A]$ finiti e relativamente primi $\Rightarrow$ $[A\cup B:B]=[A:A\cap B]$ e $[A\cup B:A]=[B:A\cup B]$.
+\begin{proof}
+Sappiamo che $[A\cup B:A\cap B]=\-[A\cup B:B][B:A\cap B]=$ \mbox{$[A\cup B:A][A:A\cap B]$} per il teorema di Lagrange, inoltre $[A\cup B:B]\geq [A:A\cap B]$.
+Riscrivo l'uguaglianza di sopra tenedo conto dell'ipotesi: 
+\begin{equation*}
+[B:A\cap B]=[A\cup B:A]\frac{[A:A\cap B]}{[A\cup B:B]}  \textrm{ , numero intero.}
+\end{equation*}
+
+Quindi $[A:A\cap B]=[A\cup B:B]$ e finalmente $[B:A\cap B]=[A\cup B:A]$.
+
+\end{proof}
+
+\item Se $o(G)=p$ primo G \'e un gruppo ciclico: tutti gli elementi sono potenze di uno stesso elemento, \'e un gruppo abeliano.
+
+
+\end{itemize}
+
+
+\subsubsection{Condizione necessaria e sufficiente per l'esistenza di sottogruppi propri}
+
+Sia G gruppo non banale $(\neq1)$, G non contiene sottogruppi propri $\iff$ G \'e un gruppo ciclico finito di ordine p, con p numero primo.
+\begin{proof}
+\fbox{$\Rightarrow$}:\\
+$b\neq1\in G$ allora il gruppo ciclico generato da b coincide con G altrimenti sarebbe un sottogruppo proprio di G: b \'e di ordine finito altrimenti $b^2$ genererebbe un sottogruppo proprio, cio\'e esiste n tale che $b^n=1$; se per assurdo $n=u*v$ con $u,v\in \mathbb{N} > 1$, allora $b^u$ genera un sottogruppo proprio di ordine v:ASSURDO $\Rightarrow$ n \'e primo.\\
+\fbox{$\Leftarrow$}:\\
+Per il teorema di Lagrange un gruppo di ordine primo non pu\'o contenere sottogruppi propri.
+\end{proof}
+
+
+\subsection{Coniugato di un elemento di un gruppo o di un insiema, Classi di coniugazione, Centro}
+\begin{definition}{Elementi coniugati(Gruppi).}
+Due elementi $a,b\in G$ si dicono coniugati se esiste $g\in G$ tale che $gag^{-1}=b$; la coniugazione \'e una relazione di equivalenza, quindi posso dividere G in classi di equivalenza: $Cl(a)=\{gag^{-1}: g\in G\}$, due classi sono uguali se e solo se gli elementi che le definiscono sono coniugati, altrimenti sono disgiunte. 
+\end{definition}
+
+Fatti:
+\begin{itemize}
+\item Gli elementi di una stessa classe hanno lo stesso ordine.
+\item Il coniugato di un elemento $a\in G$ si indica con $a^g$, $S^g$ di un sottoinsieme $S\subset G$; $S^g$ \'e un sottogruppo di G se e solo se S lo \'e.
+\item Le classi si possono descrivere in breve con sigle tipo "6A" dove 6 \'e l'ordine e A la distingue da un'altra che potrei chiamare B.
+\end{itemize}
+
+\begin{definition}{Centro}
+ L'insiene $\{z \in G | z^g=z^{-1}gz=g, \forall g \in G\}$ \'e un sottogruppo di G, si chiama centro e si indica con $Z(G)$.
+\end{definition}
+
+Fatti:
+
+\begin{itemize}
+\item Si indica $Z(G)$, Z dal tedesco zentrum, ed \'e l'insieme $Z(G)=\{ z\in G | \forall g\in G, zg=gz \}$: \'e un sottogruppo abeliano (per def.) di G.
+\item L'insieme $\{ z\in G| z^g=z, \forall g \in G \}$ \'e un sottogruppo di G esi indica $Z(G)$.
+
+\end{itemize}
+
+
+\subsection{Sottogruppo normale o invariante.}
+
+\begin{definition}{Sottogruppo normale o invariante.}
+$H\subseteq G$ si dice sottogruppo normale o invariante in G se $gH=Hg , \forall g\in G$: un sottogruppo H di G si dice normale se \'e invariante per coniugazione (Cio\'e se $\forall g \in G, \exists h_1,h_2 \in H | gh_1g^{-1}$), cio\'e $N\triangleleft G \iff \forall n\in N,\forall g\in G: gng^{-1}\in N$.
+\end{definition}
+
+\begin{definition}{Gruppo (semi-)semplice.}
+Un gruppo si dice semplice se non esistono sottogruppi invarianti.
+
+Un gruppo si dice semisemplice se non esistono sottogruppi invarianti abeliani.
+\end{definition}
+
+
+Fatti:
+\begin{itemize}
+\item Normal subgroups are a way to internally classify all homomorphisms defined on a group: a non-identity finite group is simple if and only if it is isomorphic to all of its non-identity homomorphic images, a finite group is perfect if and only if it has no normal subgroups of prime index, and a group is imperfect if and only if the derived subgroup is not supplemented by any proper normal subgroup.
+\item Il nucleo di un omomorfismo $\phi:G\to G'$ \'e un sottogruppo invariante.
+
+\begin{align*}
+g_1,g_2\to e'\Rightarrow \phi(g_1g_2)=\phi(g_1)\phi(g_2)=e'\\
+e'=\phi(g)\phi(\invers{g})=\phi(g)\invers{\phi(g)}&\intertext{Contiene $\invers{g}$ se contiene g, \'e invariante perch\'e:}\\
+g\in K_{\phi}\ \Rightarrow g_1g\invers{g_1}\in K_{\phi}
+\end{align*}
+
+Viceversa dati G e H sottogruppo invariante considero l'omomorfismo $\phi:G\to G/H$ tale che $\phi(g)=gH$:
+\begin{align*}
+\phi(g_1g_2)=g_1g_2H=g_1Hg_2H=\phi(g_1)\phi(g_2)\\
+\Idws{G/H}=H\\
+\phi(g)=gH=H\ \Rightarrow gh=h'\ \Rightarrow g\in H&\intu{Il nucleo dell'omomorfismo \'e H.}
+\end{align*}
+
+
+
+\item The center of a group is a normal subgroup.
+\item The commutator subgroup is a normal subgroup.
+\item Any characteristic subgroup is normal, since conjugation is always an automorphism.
+\item All subgroups N of an abelian group G are normal, because $gN = Ng$. 
+\item A group that is not abelian but for which every subgroup is normal is called a Hamiltonian group.
+\item The translation group in any dimension is a normal subgroup of the Euclidean group; for example in 3D rotating, translating, and rotating back results in only translation; also reflecting, translating, and reflecting again results in only translation (a translation seen in a mirror looks like a translation, with a reflected translation vector). The translations by a given distance in any direction form a conjugacy class; the translation group is the union of those for all distances.
+\item In the Rubik's Cube group, the subgroup consisting of operations which only affect the corner pieces is normal, because no conjugate transformation can make such an operation affect an edge piece instead of a corner. By contrast, the subgroup consisting of turns of the top face only is not normal, because a conjugate transformation can move parts of the top face to the bottom and hence not all conjugates of elements of this subgroup are contained in the subgroup.
+
+\end{itemize}
+
+\subsubsection{Sotto-Gruppo invariante trasformazioni triangolo}
+
+$\{ e, R_{120}=R, R_{240}=R^2\}$ sono un sotto gruppo invariante per il gruppo  di invarianza del triangolo equilatero, infatti, essendo $r_3=r$ riflessione attorno altezza per 3, \'e
+
+
+\subfile{tikz/triainvsub.tex}
+
+cio\'e, dato che $\invers{r_3}=r_3$, ho $r_3Rr_3=R^2$ e $r_3R^2r_3=R$. 
+
+c
+Per il gruppo euclideo il sottogruppo delle traslazioni \'e invariante:
+\begin{align*}
+&(R,a)(I,b)\invers{(R,a)}=(R,a)(1,b)(\invers{R},-\invers{R}a)=\\
+&=(I,Rb)
+\end{align*}
+
+\subsubsection{Sotto-Gruppo invariante gruppo di Poincar\'e.}
+
+Le traslazioni sono un sottogruppo invariante.
+
+
+\subsubsection{Classi laterali nel gruppo euclideo.}
+
+Nel gruppo euclideo di elementi $(R,a): R\in O(n), a \in R^n$ le classi laterali costruite col sottogruppo invariante delle traslazioni sono tali che
+\begin{align*}
+&(R,a)(I,b)x=R(x+b)+a=(R,c)x&\intertext{Al variare di b si pu\'o data R ogni traslazione come}\\
+a+Rb,\ b=\invers{R}(c-a)
+\end{align*}
+Le classi laterali sono distinte dall'avere la stessa trasformazione ortogonale R.
+
+\subsection{Gruppo delle classi laterali: gruppo quoziente. Omomorfismo canonico.}
+
+\begin{definition}{Gruppo Quoziente.}
+Dato un sottogruppo invariante H di G l'insieme delle classi laterali $\{[g]=\{gh,h\in H\}$ diventa esso stesso un gruppo se si definisce $[g_1][g_2]=[g_1g_2]$, il prodotto \'e ben definito:
+\begin{align*}
+&g_1\sim g_1'\ \leftrightarrow\ g_1'=g_1h_1\\
+&g_1'g_2h=g_1h_1g_2h=g_1(g_2h_1')h=g_1g_2h_2
+\end{align*}
+
+Questo gruppo si indica con $G/H$ e si chiama gruppo quoziente. 
+\end{definition}
+
+Solo con sottogruppi normali si pu\'o costruire il gruppo quoziente del gruppo dato.
+\begin{itemize}
+\item $o(G/H)=\frac{o(G)}{o(H)}$.
+\item $\forall g\in G, gNg^{-1}\subset N$.
+\item $\forall g\in G, gNg^{-1}=N$.
+\item Le classi laterali destre e sinistre di N in G coincidono.
+\item $\forall g\in G, gN=Ng$
+\item N \'e l'unione delle classi laterali di G.
+
+\end{itemize}
+
+\subsubsection{Omomorfismo canonico}
+
+\begin{align*}
+&\phi:g\to gH\in G/H\intu{\'e un omomorfismo}
+\end{align*}
+
+H sottogruppo invariante \'e il nucleo di un omeomorfismo.
+
+\subsection{Omomorfismo tra gruppi.}
+
+\begin{definition}{Omomorfismo}
+
+Dati 2 gruppi $(G,*)$ e $(H,\circ)$, una funzione $f:G\to H$ \'e un omomorfismo se
+\begin{equation*}
+f(a*b)=f(a)\circ f(b) , \forall a,b \in G
+\end{equation*}
+
+Definisco il \textbf{nucleo} dell'omomorfismo $f:G\to H$ come l'insieme(\'e un sottogruppo di G) degli elementi di G che f manda nell'identit\'a di G. 
+\begin{equation*}
+Ker(f)=\{ u\in G | f(u)=e_H \}
+\end{equation*}
+
+Definisco \textbf{Immagine} dell'omomorfismo f l'insieme (\'e un sottogruppo di H) degli elementi f(g) al variare di $g\in G$:
+\begin{equation*}
+Im(G)=\{ f(g) | g\in G \}.
+\end{equation*}
+\end{definition}
+
+Fatti:
+
+\begin{enumerate}
+\item Il Kernel e l'immagine di un omomorfismo possono essere interpretati come indicazione di quanto si avvicini ad un isomorfismo.
+\item Prendo il gruppo ciclico $\mathbb{Z}/3\mathbb{Z} = \{ 0, 1, 2 \} $ e il gruppo degli interi $(\mathbb{Z},+)$. La mappa $h : \mathbb{Z} \to \mathbb{Z}/3\mathbb{Z}$ con $h(u) \equiv u \mod 3$ \'e un omomorfismo tra gruppi. \'E surgettivo e Ker(h) \'e costituito dagli interi divisibili per 3.
+\item Se definisco la funzione $f:GL(2,\mathbb{R})\to \mathbb{R}$ con $f(M)=det(M) , \forall M\in GL(2,\mathbb{R})$, allora f \'e un omomorfismo tra gruppi. 
+\end{enumerate}
+
+\subsection{Classi di coniugazione.}
+
+\begin{definition}{Elemento coniugato.}
+Si dice che b \'e coniugato ad a $b\sim a$ se esiste $g\in G$ tale che $b=ga\invers{g}$. \'E una relazione di equivalenza.
+\end{definition}
+
+\begin{definition}{Classe di coniugazione.}
+Si chiama classe di coniugazione dell'elemento a l'insieme $K_a=\{ga\invers{g}, g\in G\}$.
+\end{definition}
+
+Fatti:
+
+\begin{itemize}
+\item Per un gruppo abeliano ogni classe di coniugazione \'e costituita da 1 elemento.
+\item Le classi di equivalenza sono disgiunte: $o(G)=\sum_{K_a}|K_a|$.
+\end{itemize}
+
+
+\subsubsection{Classi di coniugazione nel gruppo delle rotazioni.}
+
+Sia $R_1(\phi)$ rotazione attorno asse $\vec{n_1}$. Gli elementi della classe di coniugazione di $R_1$ sono del tipo $R_2(\theta)R_1(\phi)\invers{R_2(\theta)}$ con $R_2(\theta)$ rotazione attorno a $\vec{n_2}$: gli elementi della classe di coniugazione di $R_1$ hanno la propriet\'a che il vettore $R_2(\theta)\vec{n_1}$ resta invariato ($R_2(\theta)R_1(\phi)\invers{R_2(\theta)}R_2(\theta)\vec{n_1}$), sono quindi rotazioni attorno all'asse $R_2(\theta)\vec{n_1}$ di angolo $\phi$.
+
+Se scrivo la matrice della rotazione in un sistema di coordinate in cui l'asse di rotazione \'e l'asse z ho:
+$\begin{pmatrix}\cos{\alpha}&-\sin{\alpha}&0\\\sin{\alpha}&\cos{\alpha}&0\\0&0&1\\\end{pmatrix}$ la cui traccia \'e $1+2\cos{\alpha}$ e
+$\Tr{(R_2(\theta)R_1(\phi)\invers{R_2(\theta)})}=\Tr{R_1(\phi)}=1+2\cos{\phi}$ dato che la traccia \'e invariante sotto cambiamento di base.
+
+\subsubsection{Classi di coniugazione nel gruppo delle permutazioni.}
+La classe di equivalenza di una data permutazione \'e l'insieme di tutte le permutazioni con la stessa struttura a cicli.
+
+Sia $p=\permC{1}{n}{p_1}{p_n}$ e $q=\permC{1}{n}{q_1}{q_n}$ due permutazioni di $S_n$
+\begin{align*}
+&qp\invers{q}=\permC{p(1)}{p(n)}{q(p(1))}{q(p(n))}\permC{1}{n}{p(1)}{p(n)}\\
+&\permC{q(1)}{q(n)}{1}{n}&\intertext{il risultato \'e}\\
+&q(1)\to 1\to p(1)\to qp(1)&\intd{dove}\\
+&\invers{q}=\permC{q(1)}{q(n)}{1}{n}\\
+&q=\permC{p(1)}{p(n)}{qp(1)}{qp(n)}
+\end{align*}
+
+Viceversa siano $p=(123)(45)$ e $p'=(145)(23)$  con la stessa struttura a cicli, scelgo $q=\begin{pmatrix}1&2&3&4&5\\1&4&5&2&3\\\end{pmatrix}$ ho $qp\invers{q}=(145)(23)=p'$, cio\'e 
+\begin{align*}
+\begin{pmatrix}1&2&3&4&5\\2&3&1&5&4\\\end{pmatrix}\to \begin{pmatrix}q(1)&q(2)&q(3)&q(4)&q(5)\\q(2)&q(3)&q(1)&q(5)&q(4)\\\end{pmatrix}
+\end{align*}
+
+
+\subsection{Centralizzatore}
+
+Nel costruire $K_a=\{ga\invers{g}, g\in G$ non tutti i g danno elementi distinti:
+
+\begin{align*}
+&g,h\in G,\\
+&ga\invers{g}=ha\invers{h}\ \leftrightarrow \invers{h}ga=a\invers{h}g\\
+&\invers{h}g\in C_a=\{x:\ ax=xa\}
+\end{align*}
+
+Fatti:
+
+\begin{itemize}
+\item $C_a$ \'e un sottogruppo di G.
+\item h e g appartengono alla stessa classe laterale di $C_a$: gli elementi della stessa classe laterale di $C_a$ danno per coniugazione di a la stessa immagine e solo essi.
+\item $K_a$ sar\'a costituito da $\frac{o(G)}{o(C_a)}$ elementi.
+\item Se $b=ga\invers{g}\in K_a$ allora $C_b=gC_a\invers{g}$ e viceversa $C_a$ e $C_b$ hanno lo stesso numero di elementi se $b\in K_a$.
+\item Ordine di G: $o(G)=\sum_{a_i\in K_i}\frac{o(G)}{o(C_{a_i}}$, somma sulle classi $K_i$ prendendo un elemento per ogni classe.
+
+\end{itemize}
+
+\begin{definition}{Centro del gruppo.}
+\begin{align*}
+&C(G)=\{x:\ \forall g\in G,\ xg=gx\}
+\end{align*}
+
+$C(G)$ \'e un sottogruppo di G.
+
+\end{definition}
+
+Fatti:
+
+\begin{itemize}
+\item Per ogni a, $C_a$ include il centro del gruppo.
+\item Se $C(G)$ \'e uguale a G il gruppo \'e abeliano.
+\item $o(G)=p^2$: il gruppo \'e abeliano in quanto $C(G)=G$.
+
+Nel caso $o(C(G))\neq p^2$, $o(C(G))=1,p$.
+
+Per $o(C(G))=p$ esiste $a\in C(G)$, $a\in C_a$: $o(C_a)>p$, deve essere $o(C_a)=p^2$. Questo vuol dire che a commuta con tutti gli elementi del gruppo quindi $a\in C(G)$ contro l'ipotesi.   
+
+Per $o(C(G))=1$: 
+\begin{align*}
+&o(G)=\sum_{K_a}\frac{o(G)}{o(C_a)}\\
+&p^2=1+\sum_{\substack{K_a\\a\neq e}}\frac{p^2}{o(C_a)}\\
+&=1+pd&\intertext{per $a\neq e$: $o(C_a)=p$.}
+\end{align*}
+
+\end{itemize}
+
+\subsection{Prodotto diretto e semi-diretto di 2 gruppi}
+\begin{definition}{Prodotto semi-diretto}
+Il prodotto semi-diretto \'e un'estensione del concetto di prodotto diretto: dati 2 gruppi $(G_1,*_1)$ e $(G_2,*_2)$ il prodotto semi-diretto $(G_1,*_1)\rtimes_{\psi}(G_2,*_2)$ ha come elementi $G_1\times G_2$ e la legge di composizione dipende da un omomorfismo $\psi :(G_2,\star) \rightarrow Aut((G_1,*_1))$: $(a,b)*_{\times}(c,d)=(a*_1\psi_b(c),b *_2 d)$, dove con $\psi_b$ indichiamo un qualche automorfismo $\psi(b) \in Aut((G_1,*_2))$.
+\end{definition}
+
+\begin{definition}{Prodotto diretto.}
+Il prodotto diretto di due gruppi $(G_1,*_1)$ e $(G_2,*_2)$ \'e il gruppo $(G_1\times G_2,*_{\times})$, con $*_{\times}$ definita da $(a_1,a_2)*_{\times}(b_1,b_2)=(a_1*_1a_2,b_1*_2b_2)$, ecc.
+Se scelgo $\psi=Id_1$ riottengo il prodotto diretto: $(a,b)\times_{Id_1}(c,d)=(a\psi_b(c),b*_2d)=(a*_1c,b*_2d)$.
+\end{definition}
+
+Esempi:
+
+\begin{enumerate}
+\item Dato un gruppo avente ordine $pq$ con con $p,q$ numeri primi e $p<q$ per Sylow e per il TDPS \'e decomponobile come $\mathbb{Z}_q \rtimes_{\psi} \mathbb{Z}_p$ modulo isomorfismo.
+\item Ogni gruppo diedrale $D_n$ \'e isomorfo al prodotto diretto $\mathbb{Z}_n \rtimes_{\psi} \mathbb{Z}_2$ dove $\psi(0)$ \'e l'identit\'a su $\mathbb{Z}_n$ e $\psi(1)$ l'applicazione che manda un elemento $a\in \mathbb{Z}_n$ in $-a$.
+\item Il gruppo di Poincar\'e, gruppo delle isometrie dello spazio di Minkowski, \'e il prodotto semi-diretto delle traslazioni e delle trasformazioni di Lorenz:
+
+
+\end{enumerate}
+
+
+
+\subsection{Teorema sulla decomposizione in prodotto semidiretto}
+
+Sia $(G,*)$ un gruppo e siano H,K due suoi sottogruppi, se: 
+
+$\left\{
+\begin{array}{l}
+ H\triangleleft G. \textrm{(H \'e normale in G)} \\
+ G=HK=\{h*k | h\in H, k \in K\}. \\
+ H\cap K=\{e\}.
+\end{array}
+\right. \Rightarrow G\equiv H\rtimes_{\psi}K, \psi_k(h)=khk^{-1}$.
+H \'e normale quindi $\psi_k$ \'e un automorfismo.
+
+\chapter{Azione, rappresentazione, rappresentazione irriducibile.}
+\PartialToc
+
+\section{Azione di un gruppo: le rappresentazioni.}
+
+
+\subsection{Rappresentazioni}
+
+\begin{definition}{Rappresentazione (di un gruppo).}
+Una rappresentazione T di un gruppo G \'e un omomorfismo da G a un gruppo di matrici.
+\begin{align*}
+&T(g_1g_2)=T(g_1)T(g_2)\\
+&T(e)=I\\
+&T(\invers{g})=\invers{T(g)}
+\end{align*}
+\end{definition}
+
+L'insieme H degli elementi trasformati nell'identit\'a sono un sottogruppo invariante ($gh\invers{g}\in H,\ \forall g\in G$, $T(gh\invers{g})=T(g)T(h)\invers{T(g)}=I$). Se G non ha sottospazi  invarianti $T(g_1)\neq T(g_2)$ per $g_1\neq g_2$
+
+\begin{definition}{Rappresentazione fedele (di un gruppo).}
+Se G non ha sottogruppi invarianti la rappresentazione si chiama fedele: \'e un isomorfismo.
+\end{definition}
+
+Fatti:
+\begin{itemize}
+\item Se il gruppo non \'e semplice due elementi hanno lo stesso rappresentativo $T(g_1)=T(g_2)$ se $T(g_1\invers{g_2})=I$ cio\'e se $g_1\invers{g_2}\in H=\{h\in G:\ T(h)=I\}$: $g_1=hg_2$ cio\'e $g_1$ e $g_2$ appartengono alla stessa classe laterale di H.
+\item La rappresentazione \'e un isomorfismo tra il gruppo quoziente $G/H$ i cui elementi sono le classi laterali e il gruppo delle matrici.
+\end{itemize}
+
+
+\begin{definition}{Rappresentazioni equivalenti}
+Una matrice $n\times n$ rappresenta una trasformazione invertibile in una data base: una rappresentazione associa al gruppo un gruppo di trasformazioni. Queste trasformazioni hanno matrici diverse se si sceglie una base diversa:
+\begin{align*}
+&Te_i=T_{ri}e_r,\ Tv=v'=\sum_iv_i'e_i,\ v_i'=\sum_jT_{ij}v_j\\
+&e_i=\sum A_{ri}f_r,\ f_i=\invers{A}_{si}e_s&\intu{cambiamento di base}\\
+&Tf_i=\sum\invers{A}_{si}Te_s=\sum\invers{A}_{si}T_{rs}e_r\\
+&=\sum\invers{A}_{si}T_{rs}A_{pr}f_p=\sum(AT\invers{A})_{pi}f_p&\intertext{cio\'e se $T_{ij}'$ \'e il gruppo di matrici associato alla rappresentazione T nella base f si ha}\\
+&T_{ij}'=(AT\invers{A})_{ij}
+\end{align*}
+
+$T$ e $T'$ si dicono equivalenti: rappresentazioni equivalenti sono rappresentazioni di G sullo stesso gruppo di trasformazioni lineari espresse in basi diverse.
+
+\end{definition}
+
+\begin{definition}{Rappresentazione riducibile.}
+Data una rappresentazione $T(g)$  di un gruppo se esiste un sottospazio $V_1$ invariante sotto $T(g)$ per ogni $g\in G$ la rappresentazione si chiama riducibile.
+\end{definition}
+
+Fatti:
+\begin{itemize}
+\item Se si sceglie una base tale che $V=V_1\oplus V_2$ con base $\overbrace{e_1,\ldots,e_p}^{V_1},\overbrace{e_{p+1},\ldots,e_n}^{V_2}$ allora per ogni $g\in G$ $T(g)$ ha la forma:
+
+\subfile{tikz/reducibleB}.
+
+Se anche $V_2$ \'e invariante nella base scelta la rappresentazione \'e ridotta completamente.
+
+\end{itemize}
+
+\subsubsection{Gruppo delle rotazioni}
+
+Il gruppo delle rotazioni attorno ad un'asse pu\'o essere rappresentato dalle matrici
+\begin{align*}
+&T(\phi)=\begin{pmatrix}\cos{\phi}&-\sin{\phi}&0\\
+\sin{\phi}&\cos{\phi}&0\\
+0&0&1\\
+\end{pmatrix}
+&\intertext{che rappresenta una rotazione attorno a z in $R^3$.}\\
+&V_1=\{\alpha e_1+\beta e_2\},\ V_2=\{\lambda e_3\}
+\end{align*}
+
+La rappresentazione \'e ridotta: in $R^2$ non ci sono sottospazi invarianti sotto $\rotxy{\phi}$.
+
+In $C^2$
+\begin{align*}
+&f_1=(1,i),\ f_2=(1,-i)\\
+&e_i=\sum A_{ri}f_r,\ A=\const{}\begin{pmatrix}1&-i\\1&i\\\end{pmatrix}&\intertext{infatti $e_1=\frac{f_1+f_2}{2}$, $e_2=\frac{f_1-f_2}{2i}$}\\
+&A\rotxy{\phi}\invers{A}=\begin{pmatrix}\exp{-i\phi}&0\\0&\exp{i\phi}\\\end{pmatrix}
+\end{align*}
+cio\'e in $C^2$ $T(\phi)$ \'e completamente riducibile nella somma di rappresentazioni 1D: $V_1\oplus V_2$ con $V_i$ invariante sotto rotazione. \'E una conseguenza del fatto che $SO(2)$ \'e abeliano.
+
+\subsection{Rappresentazioni di un gruppo finito.}
+
+Per un gruppo finito (ed anche per certi gruppi infiniti e gruppi compatti) ogni rappresentazione \'e completamente riducibile.
+
+Se G \'e rappresentato da operatori $T(g)$ in $V_i$ \'e $V=V_1\oplus V_2\ldots\oplus V_n$ con $V_i$ invarianti sotto tutti i $T(g)$ e tali che non contengono sottospazi invarianti.
+
+La dimostrazione sfrutta il fatto che  lo spazio V \'e dotato di prodotto scalare e $T(g)$ \'e unitaria
+\begin{equation*}
+(T(g)x,T(g)y)=(x,y)
+\end{equation*}
+
+Se $V_1$ \'e invariante il suo complemento ortogonale \'e invariante:
+
+\begin{align*}
+&(x_2,x_1)=0,\ \forall x_1\in V_1\\
+&(T(g)x_2,x_1)=(x_2,T\expy{\dag}(g)x_1)=(x_2,\invers{T(g)})=(x_2,T(\invers{g})x_1)\\
+&=(x_2,x_1')=0
+\end{align*}
+
+cio\'e $T(g)x_2\in V_1\expy{\perp}$.
+
+Per un gruppo finito si pu\'o sempre introdurre un prodotto scalare tale che $T(g)$ sia unitario: si pu\'o partire da un prodotto scalare qualsiasi e data una base $\{e_i\}$ definisco $(e_i,e_j)=\delta_{ij}$ ed estendo il prodotto per linearit\'a a tutto V.
+
+\begin{definition}{Prodotto scalare unitario per rappresentazione T}
+I $T(g)$ sono unitari rispetto al ''nuovo'' prodotto
+\begin{equation*}
+(x,y)_G=\frac{1}{o(G)}\sum_{g\in G}(T(g)x,T(g)y)
+\end{equation*}
+
+\end{definition}
+
+Calcolo
+\begin{align*}
+&(T(h)x,T(h)y)_G=\frac{1}{o(G)}\sum_{g\in G}(T(g)T(h)x,T(g)T(h)y)\\
+&=\frac{1}{o(G)}\sum_{g\in G}(T(gh)x,T(gh)y)\\
+&=\frac{1}{o(G)}\sum_{g\in G}(T(g)x,T(g)y)
+\end{align*}
+infatti al variare di $g\in G$ $gh$ trova tutti gli elementi di G ($g'=gh$ per $h=\invers{g}g'$) una e una sola volta.
+
+Quindi dato V, se esso contiene $V_1$ invariante il complemento ortogonale di $V_1$ (rispetto a $(,)_G$) \'e anch'esso invariante.
+
+Fatti:
+\begin{itemize}
+    \item Se prendo  come base una base di $V_1$ e una di $V_1^{\perp}$, $T(g)$ \'e rappresentato per ogni g da una matrice
+    \subfile{tikz/reduced}
+    \item Se $V_1$ o $V_2=V_1^{\perp}$ contiene a sua volta un sottospazio invariante si procede allo stesso finch\'e V \'e decomposto in somma diretta di sottospazi irriducibili ortogonali risp. a $(,)_G$.
+    \item Per un gruppo generico quanto detto \'e falso. Per esempio $R\to GL(2,R)$, $x\to\begin{pmatrix}1&x\\0&1\\\end{pmatrix}$ \'e una rappresentazione. La rappresentazione \'e irriducibile perch\'e $\{\lambda e_1\}$ \'e invariante ma non esiste nessun altro sottospazio invariante perch\'e i soli autovettori sono i multipli di $e_1$.
+    
+\begin{align*}
+    &\begin{pmatrix}1&x\\0&1\\\end{pmatrix}\begin{pmatrix}a\\b\\\end{pmatrix}=\begin{pmatrix}a\\b\\\end{pmatrix}\\
+    &\Rightarrow a+bx=a\Rightarrow b=0
+\end{align*}
+    
+\end{itemize}
+
+\subsection{Unitariet\'a di \texorpdfstring{$T$}{T} rispetto al prodotto euclideo.}
+
+Se \'e $[]=(,)_G[e_i,e_j]=G_{ij}$ e G \'e l'operatore definito da $Ge_i=\sum_rG_{ri}e_r$ quindi $G_{ij}=(e_i,Ge_j)$:
+\begin{align*}
+&[e_i,e_j]=(e_i,Ge_j)\\
+&[x,y]=(x,Gy)
+\end{align*}
+
+$G$ \'e definita positiva ($[,]$ \'e definita positiva), $G=G^{\dag}$ ($G_{ji}=[e_j,e_i]=[e_i,e_j]=\bar{G_{ij}}$), posso scrivere $G=B^{\dag}B$ (ie $B=\sqrt{G}$) con $|\det{B}|^2=|\det{G}|\neq0$ (esiste $\invers{B}=A$, $G=\adjoint{\invers{A}}\invers{A}$). I vettori
+\begin{equation*}
+f_i=Ae_i=\sum A_{ri}e_r
+\end{equation*}
+sono ortogonali rispetto a $[,]$:
+\begin{align*}
+&[f_i,f_j]=[Ae_i,Ae_j]=(Ae_i,GAe_j)\\
+&=(e_i,A^{\dag}\adjoint{\invers{A}}\invers{A}Ae_j)=(e_i,e_j)=\delta_{ij}
+\end{align*}
+
+La condizione che $T$ sia unitario rispetto a $[,]$ equivale a
+\begin{align*}
+&[Tx,Ty]=(Tx,GTy)\\
+&=[x,y]=(x,Gy)
+\end{align*}
+
+cio\'e $\adjoint{T}GT=G$.
+
+Nella base $\{f_i\} (f_i=Ae_i)$ T \'e rappresentato da $\invers{A}TA=T'$: $\adjoint{T'}T'=I$.
+
+\begin{definition}{Funzioni nel gruppo.}
+Ad ogni elemento $g\in G$ associano un numero $f(g)$.
+
+Per esempio, data rappresentazione $T(g)$, fissati $i,j$ si ha una funzione $f(g)=T_{ij}(g)$
+\end{definition}
+
+\section{Lemma di Shur.}
+
+Siano date 2 rappresentazioni irriducibili $T_1$ e $T_2$ che agiscono negli spazi $V_1$ e $V_2$ rispettivamente e sia $A_{21}:V_1\to V_2$ operatore lineare tale che $\forall g\in G$ sia $A_{21}T_1(g)=T_2(g)A_{21}$. Se le rappresentazioni 1 e 2 non sono equivalenti \'e $A_{21}=0$, se invece le due rappresentazioni sono uguali $T_1=T_2$ e quindi $V_1=V_2$, $A_{12}=\lambda I$ \'e un multiplo dell'identit\'a.
+
+\begin{proof}
+Considero i vettori $x_1'$ tali che sia $A_{21}x_1'=0$, sono sottospazio $V_1'$ invariante sotto $T_1(g)$: $A_{21}T_1(g)x_1'=T_2(g)A_{21}x_1'=T_2(g)0=0$. Poich\'e la rappresentazione 1 \'e irriducibile deve essere $V_1'=V_1,\{0\}$, nel primo caso $A_{21}=0$, nel secondo (assurdo) $A_{21}(V_1)$ \'e un sottospazio invariante di $V_2$ sotto $T_2(q)$ perch\'e $T_2(g)(A_{21}x_1)=A_{21}x_1'$ ($\neq\insieme{x_2=0}$) perch\'e $T_2(g)(A_{21}x_1)=A_{21}x_1'$ con $x_1'=T_1(g)x_1$, cio\'e \'e ancora in $A_{21}(V_1)$ ma anche la rappresentazione $T_2(g)$ \'e irriducibile quindi sarebbe necessario $A_{21}(V_1)=V_2$: in questo caso $A_{21}$ \'e isomorfismo invertibile tra $V_1$ e $V_2$, esiste $\invers{A_{21}}$ e le due rappresentazioni risulterebbero equivalenti: contro ipotesi.
+
+Se 1 e 2 sono la stessa rappresentazione ($V_1=V_2=V$ sui complessi) $A$ deve avere almeno un autovettore: il sottospazio $V_{\lambda}=\{Ax=\lambda x\}$ \'e invariante sotto tutti i $T(g)$ ($T(g)Av_{\lambda}=T(g)\lambda v_{\lambda}=\lambda(T(g)v_{\lambda})=A(T(g)v_{\lambda})$) cio\'e $T(g)v_{\lambda}$ \'e ancora in $V_{\lambda}$; ma la rappresentazione \'e irriducibile, $V_{\lambda}\neq\insieme{0}$, deve essere $V_{\lambda}=V$: su tutto V \'e $Ax=\lambda x$, $A=\lambda I$.
+\end{proof}
+
+Nel lemma di Shur di sopra usiamo il fatto che $T(g)$ sono le matrici che rappresentano il gruppo solo perch\'e per ogni gruppo finito esite un prodotto scalare per cui $T(g)$ siano unitarie.
+
+
+\begin{generalization}{Lemma Shur}
+Se $F=\insieme{T}$ \'e insieme operatori lineari tali che lo spazio \'e irriducibile, $T\in F$ implica $\adjoint{T}\in F$, allora $AT=TA$ implica $A=\lambda I$. Nel caso di un gruppo poich\'e T \'e unitaria rispetto ad opportuno prodotto scalare e $\adjoint{T}(g)=T(\invers{g})$: $T(g)\in F\Rightarrow\adjoint{g}\in F$.
+\begin{proof}
+$T,\adjoint{T}\in F$ implica \lbt{AT=TA}{A\adjoint{T}=\adjoint{T}A}:
+
+si vede che $A,\adjoint{A}$ commutano con le T, quindi \lbt{S=\frac{A+\adjoint{A}}{2}}{D=\frac{A-\adjoint{A}}{2i}} commutano con le T. S e D sono autoaggiunte: il teorema spettrale ci dice che $S=\sum\lambda_iP_i$ (e analogo per D) con $P_i$ proiettori tali che  \lbt{P_iP_j=\delta_{ij}P_i}{\sum_iP_i=I}. I proiettori sono funziopni di S e commutano con T:
+\begin{align*}
+&x=(\sum P_i)x=\sum x_i\\
+&(S-\lambda_jI)x_j=0,\ \prod_{i\neq1}(S-\lambda_jI)(x_1+\ldots+x_n)\\
+&=\prod_{i\neq1}(\lambda_1-\lambda_j)x_1\\
+&x_1=P_1x=\frac{1}{\prod_{i\neq1}(\lambda_1-\lambda_j)}\prod_{i\neq1}(S-\lambda_jI)&\intertext{e analogamente gli altri $P$: sono polinomi in S e quindi commutano con le $T$.}
+\end{align*}
+
+Questo comporta che $H_i=P_iH$ \'e invariante sotto tutte le T: se $x_i\in H_i$ anche $Tx_i\in H_i$. ($P_iTx_i=TP_ix_i=Tx_i$) Per l'ipotesi di irriducibilit\'a ogni $H_i=\insieme{0}$ o $H_i=H$, non possono essere tutti zero dato che $\bigoplus_I H_i=H$ e poich\'e sono ortogonali un solo $H_i=H$, quindi $S=\sum\lambda_iP_i=\lambda I$; discorso analogo per $D=\sum\mu_iQ_i$. Quindi $A=S+iD=(\lambda+i\mu)I$.
+
+\end{proof}
+
+\end{generalization}
+
+
+Fatti:
+
+\begin{itemize}
+    \item Le rappresentazioni irriducibili di un gruppo abeliano sono adimensionali.
+
+    Infatti data rappresentazione irriducibile e fissato $h\in G$ $T(h)$ \'e tale che $\forall g\in G$ \'e $T(h)T(g)=T(hg)=T(gh)=T(g)T(h)$ se $gh=hg$: $T(h)$ commuta con tutti i rappresentanti del gruppo per cui deve essere $T(h)=\lambda_h I$. Questo vale per tutti gli elementi del gruppo: la rappresentazione \'e $T(g)=\begin{pmatrix}\diagentry{\lambda_h}\\&\diagentry{\lambda_h}\\&&\diagentry{\xddots}\\&&&\diagentry{\lambda_h}\end{pmatrix}$ e se non fosse unidimensionale sarebbe riducibile contro l'ipotesi.
+    \item (Viceversa) Se la rappresentazione \'e riducibile, nella base in cui \'e ridotta, l'operatore $A=\sum_k\lambda_kI_k$ dove $I_k$ \'e la restrizione dell'identi\'a a $V_k$ commuta con tutte le $T(g)$: se solo $\lambda I$ commuta con tutti i $T(g)$ la rappresentazione \'e irriducibile.
+    \item Le considerazioni precedenti non dipendono dal fatto che il gruppo sia finito.
+    \item In fisica sono interessanti  le rappresentazioni unitarie di un gruppo (rappresentati come operatori nello spazio di Hilbert degli stati) perch\'e la conservazione del prodotto scalare esprime l'invarianza delle ampiezze della probabilit\'a che riflette l'esistenza di una data simmetria.
+    \item Per i gruppi non compatti non esistono rappresentazioni unitarie di dimensione finita, tuttavia resta vero il lemma di Shur: data una rappresentazione unitaria, il solo operatore limitato che commuti con tutti i $T(g)$ se la rappresentazione \'e irriducibile \'e multiplo dell'identit\'a.
+     L'unitariet\'a della rappresentazione garantisce che se $\adjoint{T}(g)=T(\invers{g})$ \'e nella famiglia di operatori con cui A commuta, usando il teorema spettrale per operatori autoaggiunti in spazio di Hilbert si dimostra ancora che $AT=TA,\ \forall T$ implica $A=\lambda I$.
+\end{itemize}
+
+
+\section{Lemma Schur e teorema spettrale}
+
+\subsection{Teorema spettrale in spazii di Hilbert (??).}
+
+Dato $S=\adjoint{S}$ pongo $S=\sum_i^k\lambda_iP_i$ con $\lambda_1<\ldots<\lambda_n$. Si definisce una famiglia di operatori $E(\lambda)$ per ogni $\lambda$ reale
+\begin{align*}
+&E(\lambda)=0,\ \lambda<\lambda_1\\
+&E(\lambda)=P_1,\ \lambda_1\leq\lambda\leq\lambda_2\\
+&E(\lambda)=P_1+P_2,\ \lambda_2\leq\lambda\leq\lambda_3\\
+&E(\lambda)=\sum_{\lambda_i<\lambda}P_i,\ E(\lambda)=P_1+\ldots+P_n=I\ \lambda_n<\lambda
+\end{align*}
+
+poich\'e $P_iP_j=\delta_{ij}P_i$ gli $E(\lambda)$ sono tutti proiettori, essi sono discontinui in corrispondenza agli autovalori.
+
+\begin{definition}{Integrale di Stieltjes}
+The Riemann-Stieltjes integral of a real-valued function f of a real variable with respect to a real function g is denoted by $\int_a^b f(x) \, dg(x)$ and defined to be the limit, as the norm of the partition $P=\{ a = x_0 < x_1 < \cdots < x_n = b\}$ of the interval $[a, b]$ approaches zero, of the approximating sum $S(P,f,g) = \sum_{i=0}^{n-1} f(c_i)(g(x_{i+1})-g(x_i))$ where $c_i$ is in the i-th subinterval $[x_i, x_{i+1}]$. The two functions f and g are respectively called the integrand and the integrator.
+
+The ''limit'' is here understood to be a number A (the value of the Riemann-Stieltjes integral) such that for every $\epsilon> 0$, there exists $\delta > 0$ such that for every partition $P$ with $mesh(P) < \delta$, and for every choice of points $c_i$ in $[x_i, x_{i+1}]$, $|S(P,f,g)-A| < \epsilon$.
+
+\end{definition}
+
+Posso riscrivere $S=\int\lambda\,dE_{\lambda}$ con $S^2=\int\lambda^2\,dE_{\lambda}$. La definizione si estende a funzioni pi\'u generali $f(S)=\int f(\lambda)\,dE_{\lambda}$: sono nel dominio quegli x tali che $\int|f(x)|^2\,dE(x,E(\lambda)x<\infty$, con $E(\Delta_i)=E(b_i)-E(a_i)$ con $\Delta_i=(a_i,b_i)$.
+
+
+In termini degli $E(\lambda)$ il teorema spettrale si scrive tramite un integrale di \sti{}.
+
+\subsection{Lemma Schur (versione spettrale).}
+
+Il teorema spettrale implica che se \'e data una rappresentazione unitaria irriducibile di un gruppo e A \'e un operatore che commuta con tutti gli $U(g)$ allora \'e $A=\lambda I$.
+
+\begin{proof}
+Le U sono rappresentazioni di un gruppo: $U^T(g)=\invers{U(g)}=U(\invers{g})$ \'e presente nell'insieme degli operatori per i quali non c'\'e un sottospazio invariante; quindi $AU=UA$ implica $A\adjoint{U}=U\adjoint{A}$, crociando la seconda si vede che anche $\adjoint{A}$ commuta con tutte le U, quindi $S=\frac{A+\adjoint{A}}{2}$ e $D=\frac{A-\adjoint{A}}{2i}$ commutano con le U: $S=\int\lambda\,dE(\lambda)$ (??). Gli $E(\lambda)$ commutano con ogni operatore limitato che commuti con S (T. spettrale), quindi $E(\lambda)U(g)=U(g)E(\lambda)$. $H(\lambda)\equiv E(\lambda)H$ \'e allora un sottospazio invariante: se $x\in H(\lambda)$ $U(g)x$ \'e ancora in $H(\lambda)$: $E(\lambda)U(g)x=U(g)E(\lambda)x=U(h)x$.
+
+Per l'irriducibilit\'a, per ogni $\lambda$, $H(\lambda)=E(\lambda)H$ deve essere o $\{0\}$ o H: poich\'e \lbt{E(\lambda)\to I\ \lambda\to\infty}{E(\lambda)\to 0\ \lambda\to\-infty} e quindi $E(\lambda)=0$ per $\lambda<\lambda_0$, $S=\int\lambda\,dE(\lambda)=\lambda_0I$.
+
+Analogo discorso per D. 
+
+$A=S+iD=(\lambda_0+i\mu_0)I=\zeta_0I$.
+
+\end{proof}
+
+Fatti:
+\begin{itemize}
+    \item (Vicecersa:) Se $U(g)$ \'e una rappresentazione unitaria e l'unico B che commuta con gli U \'e $B=\lambda I$ allora la rappresentazione \'e irriducibile.
+    \item U unitaria \'e irriducibile se e solo se ogni $v\neq0$ \'e ciclico.
+    
+    \begin{definition}{Vettore ciclico (cyclic subspace)}
+    Un vettore v si dice ciclico se
+    \begin{equation*}
+    H=\{\sum a_iU(g_i)v\}
+    \end{equation*}
+    \end{definition}
+    
+    \item Se una rappresentazione \'e unitaria o \'e ciclica o \'e somma diretta di rappresentazioni cicliche.
+    \item $U_1,\ U_2$ rappresentazioni irriducibili in $H_1,\ H_2$ sono unitariamente equivalenti se e solo se esiste $v_1\in H_1$ e $v_2\in H_2$ (rappresentazione irriducibile: ciclici) tali che per ogni g: $(U_1(g)v_1,v_1)_1=(U_2(g)v_2,v_2)_2$.
+    
+\end{itemize}
+
+
+\section{Rappresentazione regolore di G.}
+
+\subsection{Spazio vettoriale delle funzioni su G.}
+
+Se G \'e un gruppo finito di ordine $o(G)$ l'insieme delle f sul gruppo con le normali operazioni vettoriali costituisce uno spazio vettoriale $F(G)$ di dimensione pari all'ordine del gruppo. Una base di $F(G)$ \'e data dalle funzioni $\delta_h$ definite da $\delta_h(g)=1$ per $g=h$ e $0$ altrimenti: sono linearmente indipendenti e ogni funzione pu\'o essere scritta $f(x)=\sum_{h\in G}f(x)\delta_h(x)$.
+
+\subsection{Rappresentazione regolare}\label{ssec:regularr}
+
+Su $F(G)$ si pu\'o ambientare una rappresentazione del gruppo mediante $T(h)f=\title{f}$ con $\title{f}(g)=f(\invers{h}g)$ (equivalentemente $\title{f}(g)=f(hg$).
+\begin{proof}
+\begin{align*}
+&[T(h_1)T(h_2)](f)(g_1)=T(h_1)f(\invers{h_2}g)=f(\invers{h_2}\invers{h_1}g)\\
+&=f(\invers{(h_1h_2)}g)=[T(h_1h_2)f](g)
+\end{align*}
+\end{proof}
+
+La rappresentazione non \'e irriducibile
+
+\begin{definition}{Rappresentazione regolare}
+La funzione $f(g)=1$ per ogni g \'e invariante per ogni $T(h)$: ho un sottospazio 1-dim invariante.
+
+\end{definition}
+
+\subsection{Base di $F(G)$.}
+
+Una base di $F(G)$ \'e data dalle funzioni $T\indices{^\alpha_i_j}(g)$ dove $\alpha$ numera le rappresentazioni irriducibili non equivalenti: anche la rappresentazione regolare pu\'o essere ridotta in rappresentazioni irriducibili, $F(G)=V_{\alpha}\oplus V_{\beta}\oplus\ldots$ con $V_{\alpha},\ \ldots$ irriducibili (invarianti??)
+
+\begin{proof}
+Basta verificare che le funzioni $T\indices{_i_j^{(\alpha)}}(g)$ al variare di $i, j$ sono una base di $V\indices{_\alpha}$. Sia $\phi\indices{_i^{(\alpha)}}$, $i=1,\ldots,n\indices{_\alpha}=$ una base di $V\indices{_\alpha}$, $\alpha$ fissato. Per definizione di rappresentazione irriducibile:
+\begin{align*}
+&T(g)\phi\indices{_i^{(\alpha)}}=\sum T\indices{_j_i^{(\alpha)}}(g)\phi\indices{_j^{(\alpha)}}&\intertext{cio\'e}\\
+&\phi\indices{_i^{(\alpha)}}(\invers{g}h)=\sum T\indices{_j_i^{(\alpha)}}(g)\phi\indices{_j^{(\alpha)}}(h)
+\end{align*}
+Se si pone $h=e$ si trova
+\begin{align*}
+&\phi\indices{_i^{(\alpha)}}(\invers{g})=\sum\phi\indices{_j^{(\alpha)}}(e)T\indices{_j_i^{(\alpha)}}(g)\\
+&\phi\indices{_i^{(\alpha)}}(g)=\sum T\indices{_j_i^{(\alpha)}}(\invers{g})\phi\indices{_j^{(\alpha)}}(e)
+\end{align*}
+
+\end{proof}
+
+\begin{usefull}{Significance of the regular representation of a group}
+To say that G acts on itself by multiplication is tautological. If we consider this action as a permutation representation it is characterised as having a single orbit and stabilizer the identity subgroup {e} of G. The regular representation of G, for a given field K, is the linear representation made by taking this permutation representation as a set of basis vectors of a vector space over K. The significance is that while the permutation representation doesn't decompose - it is transitive - the regular representation in general breaks up into smaller representations. For example if G is a finite group and K is the complex number field, the regular representation decomposes as a direct sum of irreducible representations, with each irreducible representation appearing in the decomposition with multiplicity its dimension. The number of these irreducibles is equal to the number of conjugacy classes of G.
+
+\end{usefull}
+
+\section{Teorema di Burnside.}
+
+Abbiamo visto che le $T\indices{_i_j^{(\alpha)}}(g)$ delle rappresentazioni irriducibiliche compaiono nella riduzione della rappresentazione regolare sono sufficienti a generare lo spazio $N(=o(G))$-dimensionale $F(G)$.
+
+$N=\sum n^2_{\alpha}$.
+
+\begin{proof}
+Per ogni $\alpha$ ho al massimo $n_{\alpha}^2$ $T\indices{_i_j^{(\alpha)}}$ per\'o se $\alpha$ e $\alpha'$ sono rappresentazioni equivalenti da $T\indices{^{(\alpha)}}=AT\indices{^{(\alpha')}}\invers{A}$ si vede che le $T\indices{_i_j^{(\alpha)}}(g)$ sono espresse come combinazion lineari di $T\indices{_i_j^{(\alpha')}}(g)$: fra le $T\indices{_i_j^{(\alpha)}}$ abbiamo al massimo $\sum n_{\alpha}^2$ funzioni linearmente indipendenti, la somma \'e sulle rappresentazioni irriducibili non equivalenti e $n_{\alpha}$ \'e la dimensione della rappresentazione.
+
+Le $T\indices{_i_j^{(\alpha)}}$ sono linearmente indipendenti perch\'e risultano ortogonali rispetto a un prodotto scalare appropriato $(T\indices{_i_j^{(\alpha)}},T\indices{_r_s^{(\beta)}}=0$ per $\alpha\neq\beta,\ i,j\neq r,s$.
+\end{proof}
+
+
+\subsection{Quante volte gli elementi di una rappresentazione irriducibile compaiono nella base ortonormale di $F(G)$}
+
+La rappresentazione regolare ha dimensione $o(G)=N$ e ogni rappresentazione irriducibile $\alpha$ sar\'a rappresentata $m_{\alpha}$ volte con $o(G)=N=\sum_{\alpha}n_{\alpha}m_{\alpha}$; il fatto che sia anche $o(G)=\sum_{\alpha}n_{\alpha}^2$ fa sospettare $m_{\alpha}=n_{\alpha}$.
+
+
+
+\begin{proof}
+Data una rappresentazione irriducibile $\alpha$, $T\indices{_i_j^{(\alpha)}}$, per ogni i fissato le $n_{\alpha}$ funzioni $e_j(g)=T\indices{_i_j^{(\alpha)}}$ sono tali che, usando la rappresentazione destra,
+
+\begin{align*}
+&T_D(h)e_j(g)=T_D(h)T\indices{_i_j^{(\alpha)}}(g)=T\indices{_i_j^{(\alpha)}}(gh)\\
+&=\sum T\indices{_i_r^{(\alpha)}}(g)T\indices{_r_j^{(\alpha)}}(h)=\sum T\indices{_r_j^{(\alpha)}}(h)e_r(g)
+\end{align*}
+
+cio\'e si trasformano fra di loro con la matrie $\alpha$: ho $n_{\alpha}$ righe in $T\indices{_r_j^{(\alpha)}}$, gli spazii vettoriali generati dagli $n_{\alpha}$ vettori di ogni riga sono ortogonali, ho $n_{\alpha}$ sottospazii vettoriali di $F(G)$ che si trasformano con la rappresentazione irriducibile $\alpha$. D'altra parte non pu\'o contenere pi\'u di $n_{\alpha}$ volte perch\'e $m_{\alpha}=n_{\alpha}$ sotura la relazione $\sum m_{\alpha}=n_{\alpha}=o(G)$.
+
+\end{proof}
+
+
+\begin{usefull}{Rappresentazione regolare destra e sinistra sono unitariamente equivalenti}
+
+Equivalenza unitaria di $T_D$ e $T_S$.
+
+\begin{definition}{Operatore riflessione su F(G)}
+Definisco l'operatore di riflessione su $F(G)$ R tale che $(Rf)(g)=f(\invers{g})$.
+\end{definition}
+
+R \'e un operatore unitario:
+\begin{align*}
+&(Rp,Rq)=(p(\invers{g}),q(\invers{g}))\\
+&=\frac{1}{o(G)}\sum_g\bar{p}(\invers{g})q(\invers{g})=\frac{1}{o(G)}\sum\bar{p}(g)q(g)\\
+&=(p,q)
+\end{align*}
+
+\begin{proof}
+Si ha che
+\begin{align*}
+&RT_D(h)f=Rf(gh)=\\
+&T_S(h)Rf=T_S(h)f(\invers{g})=
+\end{align*}
+\end{proof}
+
+Si ha quindi $RT_D=T_SR$ con R unitario.
+
+\end{usefull}
+
+
+\section{Relazioni di ortogonalit\'a in F(G).}
+
+\subsection{Prodotto scalare in $F(G)$.}
+
+Introduco in $F(G)$ il prodotto scalare
+\begin{equation*}
+(p,q)=\frac{1}{o(G)}\sum_g\bar{p(g)}q(g)
+\end{equation*}
+Con questo prodotto scalare la rappresentazione regolare \ref{ssec:regularr} \'e unitaria.
+\begin{proof}
+
+\begin{align*}
+&(T(h)p,T(h)q)=(p(\invers{h}g),q)\invers{h}g))\\
+&=\frac{1}{o(G)}\sum\bar{p}(\invers{h}g)q(\invers{h}g)=\frac{1}{o(G)}\sum_g\bar{p}(g)q(g)=(p,q)
+\end{align*}
+perch\'e $\invers{h}g$ al variare di g percorre una sola volta tutti gli elementi del gruppo.
+
+\end{proof}
+
+\subsection{Base ortonormale per $F(G)$.}
+
+Una base ortonormale per $F(G)$ \'e data dalle funzioni $\sqrt{n_{\alpha}}T\indices{_i_j^{(\alpha)}}(g)$ con $\alpha$ che distingue le rappresentazioni irriducibili non equivalenti.
+
+\begin{proof}
+Data una rappresentazione irriducibile $\alpha$ ambientata in un sottospazio vettoriale $V_{\alpha}$ sia $M:V_{\alpha}\to V_{\alpha}$ e $N=\frac{1}{o(G)}\sum_gT\indices{^{(\alpha)}}(g)M\invers{T\indices{^{(\alpha)}}(g)}$. N commuta con $T\indices{^{(\alpha)}}(h)$ per ogni h:
+\begin{align*}
+&T\indices{^{(\alpha)}}(h)N=\frac{1}{o(G)}\sum_gT\indices{^{(\alpha)}}(h)T\indices{^{(\alpha)}}(g)M\invers{T\indices{^{(\alpha)}}(g)}\\
+&=\frac{1}{o(G)}\sum_gT\indices{^{(\alpha)}}(hg)M\invers{T\indices{^{(\alpha)}}(g)}\invers{T\indices{^{(\alpha)}}(h)}T\indices{^{(\alpha)}}(h)\\
+&=\frac{1}{o(G)}\sum_gT\indices{^{(\alpha)}}(hg)M\invers{[T\indices{^{(\alpha)}}(g)T\indices{^{(\alpha)}}(h)]}T\indices{^{(\alpha)}}(h)\\
+&=\frac{1}{o(G)}\sum_gT\indices{^{(\alpha)}}(hg)M\invers{T\indices{^{(\alpha)}}(hg)}T\indices{^{(\alpha)}}(h)=NT\indices{^{(\alpha)}}(h)
+\end{align*}
+
+Per $\alpha$ irriducibile il lemma di Shur implica $N=\lambda I$, trovo $\lambda$:
+\begin{align*}
+&\lambda\Tr{I}=\lambda n_{\alpha}=\frac{1}{o(G)}\sum\Tr{[T\indices{^{(\alpha)}}(g)M\invers{T\indices{^{(\alpha)}}(g)}]}\\
+&=\Tr{M}\\
+&\Tr{M}\,I=\frac{1}{o(G)}\sum T\indices{^{(\alpha)}}(g)M\invers{T\indices{^{(\alpha)}}(g)}
+\end{align*}
+
+Fissato $i,\,j$, sia $M_{rs}=\delta_{ir}\delta_{js}$ \'e $\Tr{M}=\delta_{1j}$ e risulta
+
+\begin{align*}
+&\lambda\,I_{rs}=\frac{1}{n_{\alpha}}\delta_{ij}\delta_{rs}=\frac{1}{o(G)}\sum_g[T\indices{^{(\alpha)}}(g)M\invers{T\indices{^{(\alpha)}}(g)}]_{rs}\\
+&=\frac{1}{o(G)}\sum_g\sum_{x}T\indices{_r_p^{(\alpha)}}(g)M\indices{_p_q}\invers{T\indices{_q_s^{(\alpha)}}(g)}\\
+&=\frac{1}{o(G)}\sum_g\sum_{x}T\indices{_r_p^{(\alpha)}}(g)\delta_{ip}\delta_{jq}\invers{T\indices{_q_s^{(\alpha)}}(g)}\\
+&=\frac{1}{o(G)}\sum_gT\indices{_r_i^{(\alpha)}}(g)\invers{T\indices{^{(\alpha)}}(g)}\indices{_j_s}
+\end{align*}
+
+poich\'e $T\indices{^{(\alpha)}}$ \'e unitaria $\invers{T\indices{^{(\alpha)}}}=\adjoint{T\indices{^{(\alpha)}}}$:
+
+$\invers{T\indices{^{(\alpha)}}}\indices{_j_s}=\adjoint{T\indices{^{(\alpha)}}}\indices{_j_s}=\bar{T}(g)\indices{_s_j}$.
+
+Infine:
+
+\begin{align*}
+&\frac{1}{n_{\alpha}}\delta_{ij}\delta_{rs}=\frac{1}{o(G)}\sum_g\bar{T\indices{^{(\alpha)}}(g)}\indices{_s_j}T\indices{^{(\alpha)}}(g)\indices{_r_i}\\
+&=(T\indices{^{(\alpha)}_r_i},T\indices{^{(\alpha)}_s_j})
+\end{align*}
+
+Sempre il lemma di Schur implica che se $\alpha$ e $\beta$ sono due rappresentazioni irriducibili non equivalenti, $(T\indices{^{(\alpha)}_i_j},T\indices{^{(\beta)}_i_j})=0$:
+
+se $V_{\alpha}$ e $V_{\beta}$ sono i sottospazii su cui agiscono $T\indices{^{(\alpha)}}$ e $T\indices{^{(\alpha)}}$, e $M:V_{\alpha}\to V_{\beta}$ \'e un operatore lineare, sia
+\begin{align*}
+&N:V_{\alpha}\to V_{\beta}\\
+&N=\frac{1}{o(G)}\sum_gT\indices{^{(\beta)}}(g)M\indices{^{(\alpha)}^{(\beta)}}\invers{T\indices{^{(\alpha)}}(g)}&\intertext{\'e per ogni h}\\
+&T\indices{^{(\beta)}}(h)N=NT\indices{^{(\alpha)}}(h)&\intu{passa $T\indices{^{(\beta)}}$ sotto il segno di somma e moltiplica a destra per 1 sotto forma di $T\indices{^{(\alpha)}}(h)\invers{T\indices{^{(\alpha)}}}(h)$}
+\end{align*}
+
+quindi deve essere $N=0$ qualunque sia $M$, e quindi:
+
+\begin{align*}
+&0=\sum_{r,s}T\indices{^{(\beta)}_i_r}(g)M_{rs}\invers{T\indices{^{(\alpha)}_s_j}(g)}&\intertext{per ogni $M_{rs}$, deve essere}\\
+&0=\frac{1}{o(G)}\sum_gT\indices{^{(\beta)}_i_r}(g)\invers{T\indices{^{(\alpha)}_s_j}(g)}\\
+&=\frac{1}{o(G)}\sum_gT\indices{^{(\beta)}_i_r}(g)\bar{T}\indices{^{(\alpha)}_j_s}(g)
+\end{align*}
+
+cio\'e $(T\indices{^{(\alpha)}_j_s}(g),T\indices{^{(\beta)}_i_r}(g))=0$.
+
+\end{proof}
+
+\section{Come capire se una rappresentazione \'e irriducibile?}
+
+Per capire se una rappresentazione \'e irriducibile o meno, e in tal caso quali rappresentazioni irriducibili la compongono, \'e utile il carattere.
+
+\subsection{Carattere}
+
+\begin{definition}{Carattere}
+Il carattere \'e una funzione sul gruppo $\chi(g=)=\Tr{T(g)}$.
+\end{definition}
+
+Il carattere \'e costante sulle classi di coniugazione: infatti per $b=ga\invers{g}$ ho
+
+\begin{equation*}
+\chi(b)=\Tr{[T(g)T(a)\invers{T(g)}]}=\chi(a)
+\end{equation*}
+
+\subsection{Propriet\'a di ortogonalit\'a dei caratteri delle RI}
+
+Discendono da quelle provate per $T\indices{_i_j^{(\alpha)}}$:
+\begin{itemize}
+\item Se $\rapreg{ij}{\alpha}$, $\rapreg{ij}{\beta}$ sono due rappresentazioni irriducibili non equivalenti infatti si sa che $(\rapreg{ij}{\alpha},\rapreg{ij}{\beta})=\frac{1}{o(G)}\sum_g\rapregb{ij}{\alpha}\rapreg{ij}{\beta}$ prendendo le tracce si trova $(\chi^{\alpha},\chi^{\beta})=0$.
+\item Se $T^{\alpha}$ \'e una rappresentazione irriducibile si ha $(\chi^{\alpha}
+,\chi^{\alpha})=1$, infatti
+\begin{equation*}
+(\rapreg{ij}{\alpha},\rapreg{rs}{\alpha})=\frac{1}{n_{\alpha}}\delta_{ir}\delta_{js}
+\end{equation*}
+moltiplicata per $\delta_{ij}\delta_{rs}$ e sommata su tutti gli indici da quanto sopra.
+\item Se due rappresentazioni sono equivalenti i caratteri sono uguali.
+\end{itemize}
+
+\subsection{Propriet\'a di completezza dei caratteri delle RI}
+
+\begin{definition}{Class function.}
+Class function is a function on a group G that is constant on the conjugacy classes of G, it is invariant under the conjugation map on G. Such functions play a basic role in representation theory
+\end{definition}
+
+
+I caratteri delle \RIs{} sono un insieme completo per le funzioni $f(K_a)$ cio\'e per le funzioni a valore costante su classi di coniugazione.
+\begin{proof}
+Le $\rapreg{ij}{\alpha}$ sono una base per $F(G)$: $f(g)=\sum d_{ij}^{\alpha}\rapreg{ij}{\alpha}(g)$. Se $f(g)$ \'e una funzione di classe $f(g)=f(hg\invers{h})$ ovvero, dato che le $\rapreg{ij}{\alpha}$, sono unitarie
+
+\begin{align*}
+&f(g)=\sum d_{ij}^{\alpha}\rapreg{ir}{\alpha}(h)\rapreg{ij}{\alpha}(g)\rapregb{js}{\alpha}(h)\\
+&=\sum d_{ij}^{\alpha}\rapreg{rs}{\alpha}(g)
+(\rapreg{js}{\alpha},\rapreg{ir}{\alpha}\\
+&=\sum\invers{n_{\alpha}}d_{ii}^{\alpha}\chi^{\alpha}(g)\frac{1}{o(G)}\sum_g\chi^{\alpha}(g)=(1,\chi^{\alpha}(g))=0
+\end{align*}
+
+\end{proof}
+
+Fatti:
+\begin{itemize}
+\item Lo spazio delle funzioni di classe ha dimensione uguale al numero di classi di coniugazione del gruppo.
+\item Le $\chi^{\alpha}$ sono linearmente indipendenti e sono una base per le funzioni di classe.
+\end{itemize}
+
+\begin{usefull}{Numero rappresentazioni irriducibili.}
+Un gruppo ha tante rappresentazioni irriducibili quante sono le classi di coniugazione.
+\end{usefull}
+
+\chapter{Gruppi di Lie}
+\PartialToc
+
+\section{Lie group}
+
+\begin{definition}
+Let G be an analytic manifold, we shall call it a Lie group provided the mapping
+\begin{align*}
+G\times G \ni(x,y)\to xy^{-1}\in G&\intu{is analytical.}
+\end{align*}
+\end{definition}
+
+\subsection{Gruppal properties}
+
+\begin{definition}
+A homomorphism of a group G into $G_1$ is a mapping $\phi:G\to G_1$ such that $\phi(gh)=\phi(g)\phi(h)$.
+\end{definition}
+
+\subsection{Transformation group}
+
+\begin{definition}%% Set of all bijection of X onto itself
+The symbol $S(X)$ will denote the set of all bijections of X onto itself, choosing composition of mapping as operation $S(X)$ is a group.
+\end{definition}
+
+\begin{definition}
+A transformation group is a triple $(G,X,\cdot)$ where G is a group, X is a space, and ''$\cdot$'' or $\action{}$ is an action of G on X:
+\begin{align*}
+&G\times X\ni(g,x)\to g\action{}x\in X\intu{map satisfying:}\\
+&(g_1g_2)\action{}x=g_1\action{}(g_2x),\quad e\action{}x=x,\ \forall x\in X
+\end{align*}
+Thus  a transformation group of a set X is defined by producing a homomorphism of G into $S(X)$.
+\end{definition}
+
+
+
+\section{Action of Lie group on manifold and reppresentation}
+
+\subsection{Action and representation}
+
+\begin{definition}
+Action of Lie group on manifold M:
+\begin{align*}
+&g\in G\to \rho(g)\in\Diff(M)&\intertext{such that:}\\
+&\rho(1)=\Idws{M},\quad \rho(gh)=\rho(g)\rho(h)&\intertext{and}\\
+&G\times M\to M:(g,m)\to\rho(g).m&\intu{is a smooth map.}
+\end{align*}
+\end{definition}
+
+\begin{itemize}
+\item $\GL{}(n,R)$ acts on $\reals{n}$.
+\item $\Orth{}(n,R)$ acts on sphere $\spheres{n-1}\subset\reals{n}$.
+\item $\U{}(n,R)$ acts on sphere $\spheres{2n-1}\subset\reals{n}$.
+\end{itemize}
+
+\begin{definition}
+Representation of a Lie group is a vector space V togheter with group morphism $\rho:G\to\End(V)$, if V is finite dimensional  $G\times V\to V: (g,v)\to\rho(g).v$ smooth.
+\end{definition}
+
+\subsection{Group actions on itself}
+
+\begin{align*}
+&L_g:\, G\to G:\ L_g(h)=gh&\intu{Left action}\\
+&R_g:\, G\to G:\ R_g(h)=hg^{-1}&\intu{Right action}\\
+&Ad_g:\, G\to G:\ Ad_g(h)=ghg^{-1}&\intu{Adjoint action}
+\end{align*}
+
+\subsection{Morphisms between representation}
+
+\part{Seminario Bracci3}
+
+\chapter{I gruppi in fisica}
+\PartialToc
+
+
+\section{SL(n,m)}
+
+\section{Weyl-Heisenberg group}
+
+\section{Gruppo delle traslazioni in 4 dimensioni T(4)}
+
+\section{Gruppo di Weil-Heisenberg}
+
+\section{Rappresentazioni irriducibili grupo delle rotazioni}
+
+
+\chapter{Rappresentazioni lineari gruppo unitario a 2 variabili.}
+\PartialToc
+%https://en.wikipedia.org/wiki/Representation_theory_of_SU%282%29
+
+\section{Il gruppo \texorpdfstring{$SU(2)$}{SU2}}
+
+\begin{definition}{$SU(2)$}
+
+\begin{align*}
+&x_1'=ax_1+bx_2\\
+&x_2'=-\overline{b}x_1+\overline{a}x_2&\intu{$a\overline{a}+b\overline{b}=1$.}
+\end{align*}
+
+\end{definition}
+
+\subsection{Compact and non-abelian group}
+
+In the study of the representation theory of Lie groups, the study of representations of SU(2) is fundamental to the study of representations of semi-simple Lie groups.
+
+It is the first case of a Lie group that is both a compact group and a non-abelian group.
+
+The first condition implies the representation theory is discrete: representations are direct sums of a collection of basic irreducible representations (governed by the Peter–Weyl theorem).
+
+The second means that there will be irreducible representations in dimensions greater than 1.
+
+\subsection{\texorpdfstring{$SU(2)$}{SU2} vs \texorpdfstring{$SO(3)$}{SO3}.}
+
+$SU(2)$ is the universal covering group of $SO(3)$, and so its representation theory includes that of the latter. This also specifies importance of $SU(2)$ for description of non-relativistic spin in theoretical physics; see below for other physical and historical context.
+
+\subsection{Irreduciblie representations}
+
+As shown below, the finite-dimensional irreducible representations of $SU(2)$ are indexed by a integer or half-integer $\lambda \geq 0$, with dimension $2\lambda+1$.
+
+
+
+\chapter{Gruppo di Lorentz e Poincar\'e}
+\PartialToc
+
+%https://en.wikipedia.org/wiki/Representation_theory_of_the_Lorentz_group
+
+
+
+
+\part{Indicazioni bibliografiche.}
+
+
+\chapter{The application of group theory in physics.}
+\citetitle{lyu13application}
+\PartialToc
+
+
+\section{Second order phase transition}
+
+\section{Representations of rotation group}
+
+\section{\texorpdfstring{Schr\:oedinger}{Schroedinger} equation}
+
+\section{Representation of Lorentz group}
+
+\section{Relativistically invariant equation}
+
+\section{Nuclear reaction}
+
+
+\chapter{Group theory and its application to physical problems.}
+\citetitle{ham62group}
+\PartialToc
+
+\section{Symmetric group}
+
+\section{Linear group in n-dimensional space}
+
+\section{Atomic and nuclear problem}
+
+\section{Ray representation. Littel group.}
+
+
+\chapter{Group theory and its applications.}
+\citetitle{loe14group}
+\PartialToc
+
+
+\section{Group theory in atomic spectroscopy}
+
+\section{Group theory and solid state physics}
+
+\section{Group theory of harmonic oscillators and nuclear structure}
+
+\section{Broken symmetry}
+
+\section{Broken \texorpdfstring{$SU(3)$}{SU3} as particle symmetry}
+
+
+\addcontentsline{toc}{chapter}{References}
+\printbibliography[heading=subbibintoc]
+
+\part{Wawrzynczyk - Group representations and special functions}
+
+\chapter{Basi di teoria gruppi}
+\PartialToc
+
+\section{Gruppi}
+
+\begin{itemize}
+\item vedi anche 
+\end{itemize}
+
+\section{Differentiable manifold (Variet\'a differenziabili)}
+
+\begin{itemize}
+
+\item Differentiable manifold structure:
+
+$O\subset R^m$ open subset and $f:O\to R^k$, $k<m$, a smooth mapping and let $a\in R^k$ such that level set $M_a:=\{x\in O: f(x)=a\}$ is not empty, the Jacobian of f $[\PDy{x^j}{f^i}]$ is of constant rank for all $x\in M_a$ where $M_a$ is equipped with topology induced from $R^n$: a structure of $(m-k)$-dimensional differentiable manifold can be defined stisfying the conditions
+
+\begin{enumerate}
+\item the natural inclusion mapping $M_a\to R^n$ is smooth
+\item for each point $x\in M_a$ indices $i_1,i_2,\ldots,i_{m-k}$ can be chosen so that the mapping $x\to(i_1,i_2,\ldots,i_{m-k})\in R^{m-k}$ is a chart for $M_a$ defined on some \nhd{} of x.
+\end{enumerate}
+
+Exemplify method od defining a differentiable manifold structure:
+
+consider $O=\GL{(2,R)}\subset R^4$ and the function $\det{}:\GL{(2,R)}\to R^1$. Then the group $\SL{(2,R)}=\{x\in\GL{(2,R):\det{x}=1}$ is a level set of the function $\det{}$ and $\nabla\det{}\neq0, \forall x\in\SL{(2,R)}$.
+
+We can choose for charts the pair $(\kappa_i,U_i), i=1,2,3,4$ where 
+\begin{equation*}
+U_i=\{\TwoperTwo{x_1}{x_2}{x_3}{x_4}\in\SL{(2,R): \PDy{x_i}{\det{}}(x)\neq0}\}
+\end{equation*}
+and $\kappa_i\TwoperTwo{x_1}{x_2}{x_3}{x_4}=(x_1,\missing{i},x^4)$, where denotes omission of i-th coordinate.
+\item Tangent vector
+\item Frame bundle (Useful to introduce vector field, tensor field and differential forms on manifold).
+
+$B(M)$ is a collection of tuples $b=(m,X_1,\ldots,X_n)$ where $m\in M$ and $\{X_i\}$ is a basis of space $T_m(M)$. We define projection
+\begin{equation*}
+\pi:B(M)\to M
+\end{equation*}
+by $\Pi(b)=m$ and right action of full matrix group:
+\begin{equation*}
+b\,g:=(m;g\,X_1,\ldots,g\,X_n)
+\end{equation*}
+where $g=[g_i^j]$ (Jacobian matrix) and $gX_i=\sum_{j=1}^ng_i^jX_j$.
+Differential manifold structure can be defined on $B(M)$ to make:
+\begin{itemize}
+\item $\Pi$ smooth function
+\item Pair $(G, B(M))$ a transformation group
+\end{itemize}
+
+\item Fibre over a point
+\item Tangent bundle
+\item ($GL(n,R)$ acts on $R^n*$ by a representation contogredient to natural representation on $R^n*$)
+\item tensors
+\item Bundle of forms, bundle of k-vector
+\item $T(M)\leftrightarrow T*(M)$
+\item Lie algebra of a vector field
+\item Tangent mapping
+\item Invariant vector field
+\item sub-manifold
+\item 1-par transformation group
+\end{itemize}
+
+\section{Lie group and Lie algebra}
+
+\begin{itemize*}
+\item Lie group
+\item 1-par subgroup
+\item Exp mapping
+\item Lie subgroup
+\item $GL(n,R)$ possesses a natural analytic manifold structure given by a global chart assigning to a matrix all $n^2$ of its entries: the mapping $G\times G\ni(x,y)\to xy^{-1}\in G$ is analytic.
+\item A chart $(\kappa, U)$ defined in \nhd{} of identity of the group allow us to construct a whole atlas.
+\end{itemize*}
+
+\chapter{Theory of spherical functions}
+\PartialToc
+
+Search for possibly elementary functions on homogeneous spaces, leading to decomposition of the type 
+\begin{equation*}
+???
+\end{equation*}
+gave rise to the theory of spherical functions.
+
+
+\section{Per punti}
+
+\begin{itemize*}
+\item harmonic analysis of homogeneous spaces of compact group
+\item choices of bases for spaces H relative to which matrix elements are formed
+\item 1--1 correspondence between character and irreducible representation but character are not defined on homogeneous spaces
+\item the presence of character in harmonic analysis on $G/H$ is undesiderable
+\item components of decomposition should be function of same variables as the function under decomposition
+\item spherical function -- solution of spherical integral equation
+\item $\chi$-spherical representation
+\item Zonal spherical function
+\item spherical function and spherical representation
+\item Gelfand pairs
+\item Differentiability of spherical function on Lie group
+\end{itemize*}
+
+\subsection{Homogeneous spaces}
+In mathematics, particularly in the theories of Lie groups, algebraic groups and topological groups, a homogeneous space for a group G is a non-empty manifold or topological space X on which G acts transitively.
+
+The elements of G are called the symmetries of X.
+
+A special case of this is when the group G in question is the automorphism group of the space X - here ''automorphism group'' can mean isometry group, diffeomorphism group, or homeomorphism group. In this case X is homogeneous if intuitively X looks locally the same at each point, either in the sense of isometry (rigid geometry), diffeomorphism (differential geometry), or homeomorphism (topology). 
+
+Some authors insist that the action of G be faithful (non-identity elements act non-trivially), although the present article does not. Thus there is a group action of G on X which can be thought of as preserving some ''geometric structure'' on X, and making X into a single G-orbit.
+
+\begin{definition}{Homogeneous Spaces}
+Let X be a non-empty set and G a group. Then X is called a G-space if it is equipped with an action of G on X. Note that automatically G acts by automorphisms (bijections) on the set. If X in addition belongs to some category, then the elements of G are assumed to act as automorphisms in the same category. Thus the maps on X effected by G are structure preserving. A homogeneous space is a G-space on which G acts transitively.
+
+Succinctly, if X is an object of the category C, then the structure of a G-space is a homomorphism:
+\begin{equation*}
+\rho : G \to \mathrm{Aut}_{\mathbf{C}}(X)
+\end{equation*}
+
+into the group of automorphisms of the object X in the category C. The pair $(X,\rho)$ defines a homogeneous space provided $\rho(G)$ is a transitive group of symmetries of the underlying set of X.
+\end{definition}
+
+
+\subsection{Haar measure: unimodular group.}
+
+
+Let $(G,.)$ be a locally compact Hausdorff topological group. The $\sigma$-algebra generated by all open sets of G is called the Borel algebra. An element of the Borel algebra is called a Borel set. If g is an element of G and S is a subset of G, then we define the left and right translates of S as follows:
+\begin{align*}
+g S = \{g.s\,:\,s \in S\}&\intu{Left translate}\\
+S g = \{s.g\,:\,s \in S\}&\intu{Right translate}
+\end{align*}
+
+Left and right translates map Borel sets into Borel sets.
+
+A measure $\mu$ on the Borel subsets of G is called left-translation-invariant if for all Borel subsets S of G and all g in G one has $\mu(g S) = \mu(S)$. 
+
+A similar definition is made for right translation invariance.
+Haar's theorem
+
+There is, up to a positive multiplicative constant, a unique countably additive, nontrivial measure $\mu$ on the Borel subsets of G satisfying the following properties:
+\begin{itemize*}
+\item The measure $\mu$ is left-translation-invariant: $\mu(gE)=\mu(E)$ for every g in G and Borel set E.
+
+\item The measure $\mu$ is finite on every compact set: $\mu(K)<\infty$ for all compact K
+
+\item The measure $mu$ is outer regular on Borel sets E:
+
+        $\mu(E) = \inf \{\mu(U): E \subseteq U, U \text{ open}\}$.
+
+\item The measure $\mu$ is inner regular on open sets E:
+
+        $\mu(E) = \sup \{\mu(K): K \subseteq E, K \text{ compact}\}$.
+ 
+\end{itemize*}
+    
+Such a measure on G is called a left Haar measure. It can be shown as a consequence of the above properties that $\mu(U)>0$ for every non-empty open subset U. In particular, if G is compact then $\mu(G)>0$ is finite and positive, so we can uniquely specify a left Haar measure on G by adding the normalization condition $\mu(G)=1$.
+
+Some authors define a Haar measure on Baire sets rather than Borel sets. This makes the regularity conditions unnecessary as Baire measures are automatically regular. Halmos rather confusingly uses the term "Borel set" for elements of the $\sigma$-ring generated by compact sets, and defines Haar measure on these sets.
+
+The left Haar measure satisfies the inner regularity condition for all $\sigma$-finite Borel sets, but may not be inner regular for all Borel sets. For example, the product of the unit circle (with its usual topology) and the real line with the discrete topology is a locally compact group with the product topology and Haar measure on this group is not inner regular for the closed subset $\{1\} \times [0,1]$. (Compact subsets of this vertical segment are finite sets and points have measure 0, so the measure of any compact subset of this vertical segment is 0. But, using outer regularity, one can show the segment has infinite measure.)
+
+The existence and uniqueness (up to scaling) of a left Haar measure was first proven in full generality by Andr\'e Weil. Weil's proof used the axiom of choice and Henri Cartan furnished a proof which avoided its use. Cartan's proof also proves the existence and the uniqueness simultaneously. A simplified and complete account of Cartan's argument was given by Alfsen in 1963. The special case of invariant measure for second countable locally compact groups had been shown by Haar in 1933.
+
+Construction of Haar measure:
+
+A construction using compact subsets.
+
+The following method of constructing Haar measure is more or less the method used by Haar and Weil.
+
+For any subsets T, U of G with U nonempty define $[T:U]$ to be the smallest number of left translates of U that cover T (so this is a non-negative integer or infinity). This is not additive on compact sets T, though it does have the property that $[S:U]+[T:U]=[S∪T:U]$ for disjoint compact sets S and T provided that U is a sufficiently small open neighborhood of the identity (depending on S and T). The idea of Haar measure is to take a sort of limit of $[T:U]$ as U becomes smaller to make it additive on all pairs of disjoint compact sets, though it first has to be normalized so that the limit is not just infinity. So fix a compact set A with non-empty interior (which exists as the group is locally compact) and for a compact set T define
+\begin{equation*}
+\mu_A(T)=\lim_U\frac{[T:U]}{[A:U]}
+\end{equation*}
+where the limit is taken over a suitable directed set of open neighborhoods of the identity eventually contained in any given neighborhood; the existence of a directed set such that the limit exists follows using Tychonoff's theorem.
+
+The function $\mu A$ is additive on disjoint compact sets of G, which implies that it is a regular content. From a regular content one can construct a measure by first extending $\mu A$ to open sets by inner regularity, then to all sets by outer regularity, and then restricting it to Borel sets. (Even for open sets T, the corresponding measure $\mu A(T)$ need not be given by the lim sup formula above. The problem is that the function given by the lim sup formula is not countably subadditive in general and in particular is infinite on any set without compact closure, so is not an outer measure.)
+
+A construction using compactly supported functions.
+
+Cartan introduced another way of constructing Haar measure as a Radon measure (a positive linear functional on compactly supported continuous functions) which is similar to the construction above except that A, S, T, and U are positive continuous functions of compact support rather than subsets of G. In this case we define $[T:U]$ to be the infimum of numbers $c_1+\ldots+c_n$ such that $T(g)$ is less than the linear combination $c_1U(g1g)+\ldots+c_nU(gng)$ of left translates of U for some $g_1,\ldots,g_n$. As before we define
+\begin{equation*}
+\mu_A(T)=\lim_U\frac{[T:U]}{[A:U]}
+\end{equation*}
+The fact that the limit exists takes some effort to prove, though the advantage of doing this is that the proof avoids the use of the axiom of choice and also gives uniqueness of Haar measure as a by-product. The functional $\mu A$ extends to a positive linear functional on compactly supported continuous functions and so gives a Haar measure. (Note that even though the limit is linear in T, the individual terms $[T:U]$ are not usually linear in T.)
+
+A construction using mean values of functions.
+
+Von Neumann gave a method of constructing Haar measure using mean values of functions, though it only works for compact groups. The idea is that given a function f on a compact group, one can find a convex combination $\sum a_if(g_ig)$ (where $\sum a_i=1$) of its left translates that differs from a constant function by at most some small number $\epsilon$. Then one shows that as $\epsilon$ tends to zero the values of these constant functions tend to a limit, which is called the mean value (or integral) of the function f.
+
+For groups that are locally compact but not compact this construction does not give Haar measure as the mean value of compactly supported functions is zero. However something like it does work for almost periodic functions on the group which do have a mean value, though this is not given by with respect to Haar measure.
+
+A construction on Lie groups.
+
+On an n-dimensional Lie group, Haar measure can be constructed easily as the measure induced by a left-invariant n-form. This was known before Haar's theorem.
+
+The right Haar measure:
+
+It can also be proved that there exists a unique (up to multiplication by a positive constant) right-translation-invariant Borel measure $\nu$ satisfying the above regularity conditions and being finite on compact sets, but it need not coincide with the left-translation-invariant measure $\mu$. The left and right Haar measures are the same only for so-called unimodular groups (see below). It is quite simple, though, to find a relationship between $\mu$ and $\nu$.
+
+Indeed, for a Borel set S, let us denote by $S^{-1}$ the set of inverses of elements of S. If we define
+\begin{equation*}
+\mu_{-1}(S) = \mu(S^{-1})
+\end{equation*}
+
+then this is a right Haar measure. To show right invariance, apply the definition:
+\begin{equation*}
+\mu_{-1}(S g) = \mu((S g)^{-1}) = \mu(g^{-1} S^{-1}) = \mu(S^{-1}) = \mu_{-1}(S)
+\end{equation*}
+
+Because the right measure is unique, it follows that $\mu-1$ is a multiple of $\nu$ and so
+
+\begin{equation*}
+\mu(S^{-1})=k\nu(S)
+\end{equation*}
+
+for all Borel sets S, where k is some positive constant.
+
+The modular function.
+
+The left translate of a right Haar measure is a right Haar measure. More precisely, if ν is a right Haar measure, then
+
+\begin{equation*}
+S \mapsto \nu (g^{-1} S)
+\end{equation*}
+
+is also right invariant. Thus, by uniqueness of the Haar measure, there exists a function Δ from the group to the positive reals, called the Haar modulus, modular function or modular character, such that for every Borel set S
+
+\begin{equation*}
+\nu (g^{-1} S) = \Delta(g) \nu(S)
+\end{equation*}
+
+Since right Haar measure is well-defined up to a positive scaling factor, this equation shows the modular function is independent of the choice of right Haar measure in the above equation.
+
+The modular function is a continuous group homomorphism into the multiplicative group of positive real numbers. A group is called unimodular if the modular function is identically 1, or, equivalently, if the Haar measure is both left and right invariant. Examples of unimodular groups are abelian groups, compact groups, discrete groups (e.g., finite groups), semisimple Lie groups and connected nilpotent Lie groups. An example of a non-unimodular group is the group of affine transformations
+
+\begin{equation*}
+\big\{ x \mapsto a x + b : a\in\ R\setminus\{0\}, b\in\ R \big\}=\big\{\begin{bmatrix} a & b \\ \\ 0 & 1 \end{bmatrix}\big\}
+\end{equation*}
+
+on the real line. This example shows that a solvable Lie group need not be unimodular. In this group a left Haar measure is given by $\frac{da\,db}{a^2}$, and a right Haar measure by $\frac{da\,db}{|a|}$.
+Measures on homogeneous spaces
+
+If the locally compact group G acts transitively on a space $G/H$, one can ask if this space has an invariant measure, or more generally a relatively invariant measure with the property that $\mu(gE)=\chi(g)\mu(E)$ for some character χ of G. A necessary and sufficient condition for the existence of such a measure is that $\chi=\frac{\Delta}{\delta}$ on H, where $\Delta$ and $\delta$ are the modular functions of G and H. In particular an invariant measure on Q exists if and only if the modular function of G restricted to H is the modular function of H.
+
+Example. If G is the group $SL2(R)$ and H the subgroup of upper triangular matrices, then the modular function of H is nontrivial but the modular function of G is trivial. The quotient of these cannot be extended to any character of G, so the quotient space $G/H$ (which can be thought of as 1-dimensional real projective space) does not even have a relatively invariant measure.
+
+
+\chapter{Bessel Functions}
+\PartialToc
+
+\section{Per punti}
+
+\begin{itemize}
+\item the group of rigid motions of $R^2$
+\item spherical representation of the group $M(2)$
+\item Properties of the Bessel functions
+\item Harmonic analysis on the symmetric space of the motion group $M(2)$.
+\item Fourier-Bessel transformation
+\end{itemize}
+
+\section{Theory of spherical function: introduzione.}
+
+Inversion formulas for the Fourier transformation on $\reals{n}$ and $T$: Fundamental formulas in harmonic analysis on homogeneous spaces of compact group compared to the former have essential defects
+
+\begin{itemize}
+\item Arbitrariness of the choice of bases for the spaces H relative to which the matrix elements are formed: non-uniqueness of decomposition since there is a $1-1$ correspondence between the characters and the irrudicible representation but on the other hand the characters are not defined on homogeneous space.
+\item Elementary functions on homogenous spaces gave rise to the theory of spherical functions.
+\item Sphere $\spheres{n}$ served as starting model and the object sought were defined as solutions of the Laplace equations which are invariant under rotations about one of the axis.
+\end{itemize}
+
+\section{Spherical function as a solution of the spherical equation}
+
+
+
+
+\chapter{Theory of Jacobi and Legendre Polynomials}
+\PartialToc
+
+\section{Per punti}
+
+\begin{itemize}
+\item Representations of the group $\SL{(2,C)}$ on a space of polynomials
+\item Properties of representations $T^l$
+\end{itemize}
+
+\chapter{Miller}
+\PartialToc
+
+Inter-relationship between the theory of Lie group and algebras and special functions.
+
+\section{Special functions as solution of Laplace-Beltrami eigenvalue problems (with potential) via separation of variables}
+
+\subsection{special functions as matrix elements of Lie group representation}
+
+\begin{itemize*}
+\item Addition theorem
+\item Orthogonality relations
+\end{itemize*}
+
+\subsection{Special functions as basis functions for Lie group representations}
+
+\begin{itemize*}
+\item generating functions
+\end{itemize*}
+
+\subsection{non-hypergeometric functions}
+
+
+\subsection{Special functions as Clebsch-Gordan coefficients for the reduction of tensor products of irreducible group representation}
+
+\begin{itemize*}
+\item Wilson polynomials
+\end{itemize*}
+
+\section{Irreducible Lie group representations restricted to lattice subgroup}
+
+\subsection{\IR{} of Heisenberg group}
+\begin{itemize*}
+\item windowed Fourier transform
+\item Weil-Brezin-Zak transform and theta function
+\end{itemize*}
+
+\subsection{\IR{} of affine group}
+
+\section{Jacobi Polynomials}
+%https://en.wikipedia.org/wiki/Jacobi_polynomials
+%http://www4.ncsu.edu/~iakogan/papersPDF/sympKoganOlver.pdf
+%https://math.unibas.ch/uploads/x4epersdb/files/ATG_03.pdf (Lie algebra of algebraic vector field)
+
+
+\section{Dunkl Operators: Theory and Applications}
+%http://homepage.rub.de/margit.roesler/opsf_leuven.pdf
+
+\chapter{Lia algebras Lie group}
+\PartialToc
+
+\section{Lie group}
+
+\subsection{Group}
+A group G is a set of object together with group multiplication (binary operation that associate to ordered pair of G another element of G)
+\begin{itemize*}
+\item $ge=eg=g$ (identity exists)
+\item $gg\expy{-1}=g\expy{-1}g=e$ (inverse exists)
+\item $(gh)k=g(hk)$ (associative law)
+\end{itemize*}
+
+
+\subsection{n-dimensional local linear Lie group}
+
+W is an open connected set of $C_n$ containing $\vec{e}$.
+
+A set of $m\times m$ non singular matrices $A(\vec{g})$, where $\vec{g}=(g_1,\ldots,g_n)\in C_n$ and $\vec{e}=(0,\ldots,0)\in C_n$, is a n-dimensional local linear Lie group if
+\begin{itemize*}
+\item $A(\vec{e})=Id_m$
+\item The matrix elements of $A(\vec{g})$ are analytic functions of the parameters $\vec{g}$ and the map $\vec{g}\to A(\vec{g})$ is one2one.
+\item The n matrices $\PDy{g_j}{A(\vec{g})}$ are linearly indipendent for $\vec{g}\in W$: these matrices span n-dimensional subspace of $m^2$-dimensional space of all \mpern{m}{m} matrices for any $\vec{g}$.
+\item Exist neighborhood of $\vec{e}$ $W'\subseteq W$ such that for any n-tuples $\vec{g},\vec{h}\in W'$ there is a n-tuple $\vec{k}\in W$ for which $A(\vec{g})A(\vec{h})=A(\vec{k})$
+\end{itemize*}
+
+
+In general an n-dimensional (global) linear Lie group Kis an abstract matrix group which is also a n-dimensional local linear group G.
+
+\subsection{n-dimensional (connected, global) linear Lie group}
+
+If G ia a local linear group of \mpern{m}{m} matrices we can construct a connected global linear Lie group $\widetilde{G}\supseteq G$. Algebraically  $\widetilde{G}$ is the abstract subgroup of $GL(m,c)$ generated by the matrices of G.
+
+\subsection{Coordinates}
+
+If $B\in\widetilde{G}$ we introuduce coordinates in the neighborhood of B by means of the map $\vec{g}\to BA(\vec{g})$ where $\vec{g}$ ranges in a suitable small neighborhood of $\vec{e}$.
+
+\section{Symmetric algebra}
+
+Symmetric algebra: $S(V)$, $sym(V)$, free commutative unital associative algebra over K containing V. We pass from tensor algebra to symmetric algebra by forcing it to be commutative
+\begin{equation*}
+S(V)=T(V)/\{v\otimes w-w\otimes v\}, v,w\in V
+\end{equation*}
+
+\section{Lie Algebra}
+
+\subsection{One parameter curve}
+A one parameter curve through the identity in G is $A(\vec{g}(t))$ where $\vec{g}(t)=\vec{e}$.
+
+\subsection{Tangent space at identity}
+
+
+
+
+\appendix
+
+\part{''Generalizzazioni''. Settembre--Ottobre 2013.}
+
+
+\chapter{Insiemi}
+\PartialToc
+
+\section{Gruppo}
+
+
+Dato un insieme di elementi G e un operazione binaria * , (G,*) \'e un gruppo se:
+\begin{itemize}
+\item Chiusura
+\begin{equation*}
+\forall a,b\in G , a*b\in G.
+\end{equation*}
+\item Associativit\'a
+\begin{equation*}
+\forall a,b,c\in G , (a*b)*c=a*(b*c).
+\end{equation*}
+\item Esistenza dell'elemento neutro
+\begin{equation*}
+\exists 1\in G | 1*a=a*1=a , \forall a\in G.
+\end{equation*}
+\item Esistenza dell'inverso
+\begin{equation*}
+\forall a\in G, \exists a^{-1} \in G | a*a^{-1}=a^{-1}*a=1.
+\end{equation*}
+\end{itemize}
+
+\subsection{quasi-gruppo}
+
+Un quasi gruppo \'e un insieme di elementi in cui sia definita un'operazione bianria di prodotto $ab=c$ per cui 2 elementi determinano il terzo.
+
+\subsection{Semi-Gruppo}
+
+Un semi gruppo \'e un insieme di elementi in cui \'e definita operazione binaria: $(a\cdot b)\cdot c=a\cdot(b\cdot c)$.
+
+\subsection{Gruppi topologici e gruppi di Lie}
+
+Un gruppo G si dice topologico se l'insieme G \'e uno spazio topologico:
+ha senso parlare di continuit\'a di una funzione ecc.
+Il prodotto di G come gruppo e la struttura topologica sono legati dalla richiesta che la mappa $\phi:G\times G\mapsto G$ definita da: $\phi(x,y)=xy^{-1} ,\forall x,y \in G$, sia continua (cio\'e, dati $x_0,y_0\in G$, per ogni intorno di $\phi(x_0,y_0)$ $W$, posso scegliere intorno di $(x_0,y_0)$ $V$ tale che $\forall (x,y)\in V$ \'e $\phi(x,y) \in W$). Si pu\'o dimostrare che se la $\phi(x,y)$ definita sopra \'e continua, anche le funzioni $\psi(x,y)=xy$ e l'applicazione inversa sono continue.
+Si parla di gruppo di Lie se G \'e una variet\'a differenziabile e oltre alla continuit\'a della $\phi(x,y)$ richiediamo la sua differenziabilit\'a. \index{Gruppo di Lie}
+
+%Sia G un gruppo topologico. Supponiamo che esista una struttura analitica sull’insieme G, compatibile con la sua topologia, che in- duce su di esso una struttura di variet\'a differenziabile analitica e per la quale le mappe
+%(x,y)��−→xy (x,y∈G) x ��−→ x−1	(x ∈ G)
+%di G×G in G e di G in G rispettivamente siano entrambe analitiche. Allora G, con questa struttura analitica, si dice gruppo di Lie analitico o, pi`u sinteticamente, gruppo di Lie. Un gruppo di Lie connesso si dice gruppo analitico.
+
+
+\section{G-spazi}
+
+
+\subsection{Rivestimento universale di un gruppo di Lie}
+Un gruppo di Lie connesso si dice gruppo analitico\index{Gruppo analitico}.
+%Sia G un gruppo ammissibile. Un gruppo ammissibile G�� si dice gruppo rivestimento di G se esiste un omomorfismo continuo $\omega$ con nucleo discreto che mappa G�� su G. $\omega$ \'e allora detto omomorfismo rivestimento.
+Dato un qualsiasi gruppo ammissibile G esiste sempre un gruppo rivestimento di G semplicemente connesso. Esso \'e determinato a meno di isomorfismi ed \'e noto come il gruppo universale rivestimento di G. Per quanto visto nei capitoli precedenti, un rivestimento universale di un tale G esiste sempre; il fatto straordinario \'e che tale rivestimento sia un gruppo di Lie con un’unica struttura di gruppo di Lie.
+
+
+
+\section{Integration on a Lie group}
+
+%\section{Group_action}
+%http://en.wikipedia.org/wiki/Group_action
+\section{Rappresentazioni}
+
+\subsection{Rappresentazioni unitarie}
+
+\subsection{Rappresentazione irriducibile}
+
+
+
+\subsection{Tavole caratteristiche}
+%http://mathworld.wolfram.com/CharacterTable.html
+
+%http://users.dimi.uniud.it/~mario.mainardis/LIBRO02.pdf
+
+
+\chapter{Lemmi e Teoremi e loro uso}
+\PartialToc
+
+\section{Insiemi generatori}
+
+\section{Sottogruppo: Condizione necessaria e sufficiente}
+Un sottoinsieme $H\subset G$ \'e sottogruppo di G se e solo se:
+\begin{itemize}
+\item $ h_1,h_2\in H \Rightarrow h_1*h_2\in H $
+\item $h_1\in H \Rightarrow h_1^{-1}\in H$
+\end{itemize}
+
+
+
+
+
+\section{Teorema di isomorfismo}
+% http://en.wikipedia.org/wiki/Isomorphism_theorem
+
+
+\section{Sylow}
+
+\section{Wonderful Orthogonality Theorem}
+
+\section{Schur}
+
+\section{Teorema di classificazione dei gruppi semplici finiti}
+
+\section{Analogia formale tra SU(2) e SO(3)}
+I gruppi $$ e $$, per rotazioni infinitesime, godono della stessa algebra di Lie e quindi le trasformazioni U ed R, dipendendo dallo stesso numero di parametri continui reali, sono isomorfe in intorni infinitesimali della trasformazione identica. 
+
+\section{Rivestimento e proiezione naturale}
+%Teorema Sia X un G-spazio; se l’azione di G su X `e propriamente discontinua, allora p : X −→ X/G `e un rivestimento, dove p `e la proiezione naturale.
+
+\chapter{Applicazioni}
+\PartialToc
+
+
+\section{The Wilson FG-Matrix formulation of Molecular Vibrations}
+%http://www4.ncsu.edu/~franzen/public_html/CH431/lecture/Group_Theory.pdf pg.83
+\section{exponential mapping as representation of setof unitary matrices by matrices satisfying linear relations}
+
+\section{Cayley-Sudoku Tables}
+http://www.reed.edu/math/nums/resources/presentations/hossner.pdf
+
+\section{Legame tra armoniche sferiche e rappresentazioni gruppali}
+(E.Cartan H. Weyl) Le armaniche sfferiche vengono fuori in maniera naturale dallo studio delle funzioni del gruppo $G\\H$, dove G \'e il gruppo ortogonale su uno spazion n-dimensionale, $G=o(n)$, e K \'e il sottogruppo di o(n) che lascia invariantte un determinato vettore; per applicare la teoria a una classe pi\'u larga di funzioni speciali assumiomo solo che K sia compatto e studieremo non solo le funzioni su $G\\K$ ma anche su G.
+
+\subsection{\texorpdfstring{$G=SL(2,\mathbb{R})$}{G=SL(2,R)}, Bargman 1947}
+$\phi(g)$ caratteristica $\chi$ di K
+
+\section{Construction of Haar measure with differential forms}
+We now give yet another construction of Haar measure, making use of differential forms
+
+
+\chapter{Tensor space}
+%http://arxiv.org/pdf/1510.02428v1.pdf
+\PartialToc
+
+\chapter{Symmetric space}
+%https://en.wikipedia.org/wiki/Symmetric_space
+%http://arxiv.org/pdf/cond-mat/0205288v1.pdf
+\PartialToc
+
+\chapter{Gruppoidi}
+\PartialToc
+
+Groups to Groupoids
+In this section we define groupoid structures that model group structures. We use groupoids because the algebra is closer to the geometry; a word in a groupoid corre- sponds to a path in the underlying graph of the groupoid.
+The category of groupoids also provide an algebraic analogue of the unit interval which will be used to construct cylinders and mapping cylinders for groupoids and crossed complexes in Chapter 3.
+We refer the reader to Higgin’s [16] and Brown’s Topology [4] for full accounts on groupoids and applications of groupoids.
+This section gives examples of groupoids that w ill be used throughout this expo- sition, and details of how group concepts of free groups, normal subgroups, quotient groups, cosets and presentations are modelled in groupoid theory. We also give the construction of the universal groupoid which enables free products with amalgamation and HNN-extensions to be defined as pushouts of groupoids.
+1.2.1	Examples and Properties of Groupoids
+Groupoids are a generalisation of groups. A group is a groupoid since it is a category where every arrow has an inverse. It it is profitable to study groups in the context of groupoids. In Chapter 2 we construct the fundamental groupoid of a graph of groups which shows how more complicated groups can be constructed from less complicated groups in the context of groupoids.
+The unit groupoid acts as the unit interval in the theory of groupoids and will be used to construct mapping cylinders and total crossed complexes in this thesis.
+
+
+\chapter{Grafi}
+%http://en.wikipedia.org/wiki/Frucht%27s_theorem
+%http://en.wikipedia.org/wiki/Chromatic_number#Definition_and_terminology
+%http://en.wikipedia.org/wiki/Hamiltonian_graph
+%http://en.wikipedia.org/wiki/Frucht_graph
+%http://en.wikipedia.org/wiki/Graph_automorphism
+\PartialToc
+
+\chapter{Reticolo}
+\PartialToc
+
+\section{Basicxx...}
+
+\stopcontents[chapters]
+\clearpage
+
+\addcontentsline{toc}{section}{Index}
+\printindex
+
+
+\end{document}
