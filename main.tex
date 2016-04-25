@@ -1520,7 +1520,7 @@ To say that G acts on itself by multiplication is tautological. If we consider t
 
 \end{usefull}
 
-\section{Teorema di Burnside.}
+\section{Teorema di Burnside.}\label{sec:burnsidet}
 
 Abbiamo visto che le $T\indices{_i_j^{(\alpha)}}(g)$ delle rappresentazioni irriducibiliche compaiono nella riduzione della rappresentazione regolare sono sufficienti a generare lo spazio $N(=o(G))$-dimensionale $F(G)$.
 
@@ -1533,7 +1533,7 @@ Le $T\indices{_i_j^{(\alpha)}}$ sono linearmente indipendenti perch\'e risultano
 \end{proof}
 
 
-\subsection{Quante volte gli elementi di una rappresentazione irriducibile compaiono nella base ortonormale di $F(G)$}
+\subsection{Quante volte gli elementi di una rappresentazione irriducibile compaiono nella base ortonormale di $F(G)$}\label{ssec:quantevolteri}
 
 La rappresentazione regolare ha dimensione $o(G)=N$ e ogni rappresentazione irriducibile $\alpha$ sar\'a rappresentata $m_{\alpha}$ volte con $o(G)=N=\sum_{\alpha}n_{\alpha}m_{\alpha}$; il fatto che sia anche $o(G)=\sum_{\alpha}n_{\alpha}^2$ fa sospettare $m_{\alpha}=n_{\alpha}$.
 
@@ -1690,7 +1690,7 @@ moltiplicata per $\delta_{ij}\delta_{rs}$ e sommata su tutti gli indici da quant
 \item Se due rappresentazioni sono equivalenti i caratteri sono uguali.
 \end{itemize}
 
-\subsection{Propriet\'a di completezza dei caratteri delle RI}
+\subsection{Propriet\'a di completezza e ortogonalit\'a dei caratteri delle RI}
 
 \begin{definition}{Class function.}
 Class function is a function on a group G that is constant on the conjugacy classes of G, it is invariant under the conjugation map on G. Such functions play a basic role in representation theory
@@ -1719,6 +1719,147 @@ Fatti:
 \begin{usefull}{Numero rappresentazioni irriducibili.}
 Un gruppo ha tante rappresentazioni irriducibili quante sono le classi di coniugazione.
 \end{usefull}
+
+\begin{usefull}{Quante volte \'e contenuta una rappresentazione irriducibile in una rappresentazione generica.}
+Data una rappresentazione generica T del gruppo G essa conterr\'a $m_{\alpha}$ volte la rappresentazione $\alpha$, $m_{\beta}$ larappresentazione irriducibile $\beta$, la raccia \'e invariante per cambiamento di base e i caratteri di rappresentazioni equvalenti sono uguali: se si pensa alla T in forma completamente ridotta si ha
+\begin{equation*}
+\chi(g)=m_{\alpha}\chi^{\alpha}(g)+m_{\beta}\chi^{\beta}+\ldots=\sum m_{\alpha}\chi^{\alpha}
+\end{equation*}
+Da questo si trova $(\chi,\chi^{\alpha})=m_{\alpha}$. La rappresentazione \'e irriducibile se e solo se $(\chi,\chi)=1$ (da $(\chi,\chi)=\sum m_{\alpha}$).
+\end{usefull}
+
+\subsection{Seconda relazione di ortogonalit\'a dei caratteri.}
+
+Riscrivo la relazione di ortogonali\'a $(\chi^{\alpha},\chi^{\beta}=\delta_{\alpha\beta}$:
+\begin{align*}
+&\delta_{\alpha\beta}=\frac{1}{N}\sum_g\bar{\chi}^{\alpha}(g)\chi^{\beta}(g)=\frac{1}{N}\sum_{K_i}\bar{\chi}^{\alpha}(K_i)\chi^{\beta}(K_i)\\
+&=\sum_i\frac{\sqrt{N_i}}{\sqrt{N}}\bar{\chi_i}^{\alpha}\chi_i^{\beta}\frac{\sqrt{N_i}}{N}
+\end{align*}
+
+\begin{definition}{Matrice M (Caratteri)}
+Introduco  la matrice
+\begin{equation*}
+M_{\beta i}=\sqrt{\frac{N_i}{N}}\chi_i^{\beta}
+\end{equation*}
+
+\end{definition}
+
+Quindi riscrivo la relazione sopra
+\begin{equation*}
+\sum_iM_{\beta i}\bar{M}_{\alpha i}=\sum_iM_{\beta i}\adjoint{M}_{i\alpha}=\delta_{\alpha\beta}
+\end{equation*}
+cio\'e $M\adjoint{M}=I$. Questo comporta  che $\adjoint{M}=\invers{M}$ quindi anche $\adjoint{M}M=I$:
+\begin{align*}
+&\sum_{\alpha}\adjoint{M}_{i\alpha}M_{\alpha j}=\delta_{ij}&\intertext{cio\'e}\\
+&\sum_{\alpha}\bar{M}_{\alpha i}M_{\alpha j}=\sum_{\alpha}\frac{\sqrt{N_i}}{\sqrt{N}}\bar{\chi}_i^{\alpha}\frac{\sqrt{N_j}}{\sqrt{N}}\chi_j^{\alpha}=\delta_{ij}
+\end{align*}
+
+Quindi abbiamo trovato quella che viene chiamata la seconda relazione di ortogonalit\'a dei caratteri
+\begin{equation*}
+\frac{1}{N}\sum_{\alpha}\bar{\chi}^{\alpha}(K_i)\chi^{\alpha}(K_j)\sqrt{N_iN_j}=\delta_{ij}
+\end{equation*}
+
+\subsection{Gruppo di simmetria del triangolo}
+
+Per il gruppo di simmetria del triangolo ho sei elementi. Il gruppo non \'e abeliano: non \'e possibile che tutte le rappresentazioni irriducibili siano 1-dim., in questo caso ci sarebbero tante \RIs{} quanti sono gli elementi del gruppo ($\sum_{\alpha}n_{\alpha}=o(G)$), allora ci sono tante classi di coniugazione quanti sono gli elementi del gruppo (ogni elemento \'e una classe di coniugazione) e il gruppo sarebbe abeliano (pe rogni $g,\ a$ $ga\invers{g}=a$).
+
+\begin{usefull}{Condizione di abelianit\'a}
+Un gruppo \'e abeliano \ses{} tutte le sue rappresentazioni irriducibili sono 1-dim.
+\end{usefull}
+
+\begin{usefull}{Rappresentazioni irriducibili del gruppo di simmetria del triangolo}
+Per $S_3$ $6=\sum n_{\alpha}=1+1+4$: una \RI{} 1-dim \'e quella triviale $T(g)=1$, un'altra \'e quella per cui $T_R=1$, $T_A=-1$ e l'ultima \'e data dalle matrici di riflessioni e rotazioni di $R^2\to R^2$:
+
+\begin{align*}
+&I=\begin{pmatrix}
+1&0\\0&1\\
+\end{pmatrix},\ R_{120}=\begin{pmatrix}
+-\frac{1}{2}&-\frac{\sqrt{3}}{2}\\\frac{\sqrt{3}}{2}&-\frac{1}{2}\\
+\end{pmatrix},\\
+&R_{240}=\begin{pmatrix}
+-\frac{1}{2}&\frac{\sqrt{3}}{2}\\-\frac{\sqrt{3}}{2}&-\frac{1}{2}\\\end{pmatrix},\ r_3=\begin{pmatrix}
+-1&0\\0&1\\
+\end{pmatrix},\\
+&r_1=\begin{pmatrix}
+\frac{1}{2}&\frac{\sqrt{3}}{2}\\-\frac{\sqrt{3}}{2}&-\frac{1}{2}\\\end{pmatrix},\ r_2=\begin{pmatrix}
+\frac{1}{2}&-\frac{\sqrt{3}}{2}\\-\frac{\sqrt{3}}{2}&-\frac{1}{2}\\\end{pmatrix}&\intertext{questa rappresentazione \'e irriducibile perch\'e}
+&\frac{1}{6}\sum\chi(g)^2=\frac{1}{6}(4+1+1)=1
+\end{align*}
+
+Le tre classi di coniugazione in cui il gruppo \'e diviso sono: $\{I\}$, $\{\text{riflessione: traccia }=0\}$ e $R_{120},\ R_{240},\ \text{traccia }=-1$: infatti il gruppo \'e $S_3$ e le classi di coniugazione sono individuate dalle permutazioni che hanno la stessa struttura a cicli.
+
+\end{usefull}
+
+\begin{usefull}{Spesso i caratteri possono essere ricavati senza esplicitare la \RI{}}
+
+Per il triangolo si pu\'o costruire una matrice $3\times3$:
+
+\subfile{tikz/caratteritriang}
+
+Prima riga e colonna banali (prendo la traccia della matrice identit\'a $2\times2$), per le rappresentazioni 2-dim. le riflessioni hanno traccia 0 (nella base in cui $e_1\to-e_1$ la matrice \'e $\begin{pmatrix}1&0\\0&-1\\\end{pmatrix}$), poich\'e $r^2=I$ in 22 possiamo avere $\pm1$ (come si pu\'o vedere dal fatto che la norma quadra della seconda colonna \'e $\frac{6}{|K|}=2$), infine dalla condizione di ortogonalit\'a colonne I-II si ha che in 22 deve esserci $-1$, fra seconda e terza colonna che in 23 deve esserci $1$ e fra I e III che in 33 deve esserci $-1$.
+
+\end{usefull}
+
+\subsection{Gruppi $S_n$.}
+
+In generale per i gruppi $S_n$ il numero delle classi di coniugazione \'e uguale al numero di modi in cui n pu\'o essere ripartito in $n=n_1+n_2+\ldots$ con $n_{i+1}\geq n_i$: le permutazioni di una stessa classe hanno la stessa struttura a a cicli.
+
+\section{Rappresentazione regolare del gruppo di simmetria del triangolo.}
+
+$F(G)$ ha dimensione $6=o(G)$. La rappresentazione contiene 2 \RIs{} 2-dim e 2 1-dim: perch\'e per il teorema di Burnside \eqref{sec:burnsidet} G non \'e abeliano e $6=2^2+1^2+1^2$, la rappresentazione 2-dim deve entrare 2 volte quella 1-dim 1 volta \eqref{ssec:quantevolteri}.
+
+Considero in $F(G)$ la base
+\begin{equation*}
+\sigma_g(P)=\{\sigma_e,\ \sigma_{R_1},\ \sigma_{R_2},\ \sigma_{r_1},\ \sigma_{r_2},\ \sigma_{r_3}\}
+\end{equation*}
+tale che $T_D(h)\sigma_g(P)=\sigma_g(Ph)=$\lbt{1\text{ per $Ph=g$}}{0 \text{ altrimenti}}, quindi
+\begin{align*}
+&P=g\invers{h}&\intertext{cio\'e}\\
+&T_D(h)\sigma_g(P)=\sigma_{g\invers{h}}(P)
+\end{align*}
+
+\subfile{tikz/multiplicationtriang}
+
+\section{Equazione delle classi.}
+
+L'utilit\'a principale dei caratteri \'e di permettere di
+\begin{itemize}
+\item vedere quali \RIs{} sono presenti in una rappresentazione data ($m_{\alpha}=(\chi^{\alpha},\chi)$),
+\item vedere se una rappresentazione \'e irriducibile, vedere se una rappresentazione \'e irriducibile ($\chi,\chi)=1$),
+\item vedere se due rappresentazioni sono equivalenti (i caratteri sono uguali: $T=AT\invers{A}$, le tracce sono uguali e $m_{\alpha}=(\chi^{\alpha},\chi)=(\chi^{\alpha},\chi')=m_{\alpha}'$.
+\end{itemize}
+
+Il punto di partenza per ricavare i caratteri senza conoscere esplicitamente le \RIs{} \'e l'equazione delle classi.
+
+\subsection{Prodotti di tutti gli elementi appartenenti a due classi di coniugazione.}
+
+Date due classi di coniugazione $K_a$ e $K_b$ considero l'insieme di tutti i prodotti $a_ib_j$ con $a_i\in K_a$, $b_j\in K_b$: capiter\'a che un certo elemento pu\'o essere generato in pi\'u modi $c=a_ib_j=a_rb_s=\ldots$. Risulta che se un certo elemento c compare n volte fra i $|K_a||K_b|$ prodotti $a_ib_j$ allora tutti gli elementi della classe a cui c appartiene compaiono n volte:
+
+\begin{align*}
+&c=ab,\ c'=gc\invers{g}:\\
+&c=gab\invers{g}=ga\invers{g}gb\invers{g}=a'b',\ a'\in K_a,\ b'\in K_b
+\end{align*}
+
+Ogni volta che compare c nei prodotti compare anche c' che quindi \'e presente almeno quanto c, scambiando i ruoli si vede che vale l'uguaglianza: tutti gli elementi di $K_r\ni c$ compaiono lo stesso numero di volte, quindi i $|K_a||K_b|$ prodotti $ab$ possono essere raggruppati in classi $K_r$ ciascuna delle quali compare un numero $c_{abr}$ di volte. Si indica questo fatto con la relazione
+\begin{equation}
+K_aK_b=\sum c_{abr}K_r\label{eq:classeq}
+\end{equation}
+
+\subsection{Equazione delle classi}
+
+Data una rappresentazione $T(g)$ se si introducono le matrici di classe \index{Matrici di classe (def)} $T(K_i)=\sum_{g\in K_i}T(g)$, la relazione \eqref{eq:classeq} diventa
+\begin{equation*}
+T(K_a)T(K_b)=\sum c_{abr}T(K_r)
+\end{equation*}
+infatti ogni $c\in K_r$ compare nei prodotti $a_ib_j$ un numero $c_{abr}$ di volte e 
+\begin{align*}
+&T(c)=T(a_i)T(b_j)\\
+&\sum_{a_i\in K_a}T(a_i)\sum_{b_j\in K_b}T(b_j)=T(K_a)T(K_b)\\
+&=\sum_rc_{abr}\sum_{c\in K_r}T(c)=\sum_rc_{abr}T(K_r)
+\end{align*}
+
+\subsection{Equazione delle classi via formale: rappresentazione di algebra}
+
 
 \chapter{Gruppi di Lie}
 \PartialToc

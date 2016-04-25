@@ -1,0 +1,36 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+
+\begin{tikzpicture}
+
+\tikzset{square matrix/.style={
+    matrix of nodes,
+    column sep=-\pgflinewidth, row sep=-\pgflinewidth,
+    nodes={
+      minimum height=#1,
+      anchor=center,
+      text width=#1,
+      align=center,
+      inner sep=0pt
+    },
+  },
+  square matrix/.default=8mm
+}
+
+\matrix (multtable) [square matrix]
+{
+{} & $e$ & $R_1$ & $R_2$ & $r_1$ & $r_2$ & $r_3$\\
+$e$ & $e$ & $R_1$ & $R_2$ & $r_1$ & $r_2$ & $r_3$\\
+$R_1$ & $R_1$ & $R_2$ & $e$ & $r_3$ & $r_1$ & $r_2$\\
+$R_2$ & $R_2$ & $e$ & $R_1$ & $r_2$ & $r_3$ & $r_1$\\
+$r_1$ & $r_1$ & $r_2$ & $r_3$ & $e$ & $R_1$ & $R_2$\\
+$r_2$ & $r_2$ & $r_3$ & $r_1$ & $R_2$ & $e$ & $R_1$\\
+$r_3$ & $r_3$ & $r_1$ & $r_2$ & $R_1$ & $R_2$ & $e$\\
+};
+\draw[] (multtable-1-1.north east) -- (multtable-7-1.south east);
+\draw[] (multtable-1-1.south west) -- (multtable-1-7.south east);
+
+\end{tikzpicture}
+\end{document}
